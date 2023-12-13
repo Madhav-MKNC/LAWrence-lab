@@ -6,7 +6,6 @@ Your output will always be only a JSON list of relevant law articles along with 
 {{
     "articles": [
         {{
-            "article_ref": "OR ART. 27 Abs. 2bis",
             "article_ref": "OR ART. 27 Abs. 2bis"
         }}
         # more articles (if any)
