@@ -1,7 +1,7 @@
 # LAWrence-lab
 Comparing the performance of several models with several prompts based on their responses.
 
-Steps to run the system on local:
+# Setup
 
 ```
 touch .env
@@ -23,18 +23,6 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Run:
-
-```
-python main.py START_ROW END_ROW
-```
-
-Example Usage:
-
-```
-python main.py 1 3
-```
-
 # Important NOTE
 
 Every prompt should mention only this response format explicitly
@@ -46,4 +34,22 @@ Every prompt should mention only this response format explicitly
         {"article_ref": "OR ART. 12a Abs. 2"}
     ]
 }
+```
+
+# Run
+
+For Extracting and comparing articles:
+
+<code>python extract_articles.py START_ROW END_ROW</code>
+
+Example Usage:
+
+```
+python extract_articles.py 1 3
+```
+
+For mean performances:
+
+```
+python main.py
 ```
