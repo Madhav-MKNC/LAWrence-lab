@@ -5,15 +5,13 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+import json
+from typing import List
 from openai import OpenAI, OpenAIError
 
 
-# Set your OpenAI API key
+# OpenAI client
 openai_client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
-
-# model = "gpt-4-1106-preview"
-
-
 
 
 # get precision and recall
@@ -64,5 +62,46 @@ def get_openai_response(
 
     except OpenAIError as e:
         print('\033[31m*** get_openai_response():', str(e), "\033[m")
-        return "{}"
+        return "{'articles': []}"
 
+
+# Validate gpt response
+def validate_articles(output: str) -> List[str]:
+    """
+    Expects the output:str returned from openai API call in the following structure:-
+    {
+        "some key": [
+            {"article_ref": "CO ART. 337"},
+            {"article_ref": "OR ART. 12a Abs. 2"}
+        ]
+    }
+    """
+    articles = []
+    try:
+        output = json.loads(output)
+        output = list(output.values())[0]
+        print("\033[93m[+] Articles retured from GPT:")
+        print(str(output) + "\033[m")
+        for i in output:
+            articles.append(i["article_ref"])
+        print('[+] Validated articles returned from GPT.')
+    except Exception as e:
+        print('\033[31m*** validate_articles():', str(e), "\033[m")
+    return articles
+
+
+# get precision, recall
+def get_performance(
+    expected_article_ref: str,
+    returned_article_ref: str
+) -> (float, float):
+    # process
+    return 0.2, 0.3
+
+
+# average of results 
+def get_average_performance(
+    prompt_num: int
+) -> (float, float):
+    # process
+    return 0.22, 0.33

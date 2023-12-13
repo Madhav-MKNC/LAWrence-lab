@@ -34,3 +34,16 @@ Example Usage:
 ```
 python main.py 1 3
 ```
+
+# Important NOTE
+
+Every prompt should mention only this response format explicitly
+
+```
+{
+    "articles": [
+        {"article_ref": "CO ART. 337"},
+        {"article_ref": "OR ART. 12a Abs. 2"}
+    ]
+}
+```
