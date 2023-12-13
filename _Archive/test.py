@@ -23,4 +23,6 @@ df = xls.parse("Overview")
 
 
 # print(df.iloc[0:2])
-# print(df.iloc[0]["Used model"])
+# print(df.iloc[0:5]["Used model"])
+
+# print(list(map(int, df["Test"])))

@@ -3,12 +3,13 @@
 
 import sys
 import pandas as pd
-from utils import rate_performance, get_openai_response, validate_articles, get_performance
+from utils import get_openai_response, validate_articles
+from compare import get_performance
 
 
 # command line arguments
 start_row = 1
-end_row = 3
+end_row = 2
 # try:
 #     start_row = int(sys.argv[1])
 #     end_row = int(sys.argv[2])
@@ -21,7 +22,7 @@ input_file_path = 'Validation.xlsx'
 output_file_path = "Output_Comparison.xlsx"
 
 # Read Articles Extraction sheet
-print("[*] Reading Validation.xlsx sheet.")
+print("[*] Reading Validation.xlsx")
 xls = pd.ExcelFile(input_file_path)
 overview_df = xls.parse("Overview")
 articles_extraction_df = xls.parse("Articles Extraction")
@@ -72,6 +73,6 @@ for _, prompt_row in overview_df.iterrows():
         articles_extraction_df.at[index, recall_column] = recall
         
         # save results
-        articles_extraction_df.to_excel(output_file_path, index=False)
+        articles_extraction_df.to_excel(output_file_path, sheet_name="Results", index=False)
         print("** Response saved")
 

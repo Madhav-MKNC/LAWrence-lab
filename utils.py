@@ -5,6 +5,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+import pandas as pd
 import json
 from typing import List
 from openai import OpenAI, OpenAIError
@@ -12,22 +13,6 @@ from openai import OpenAI, OpenAIError
 
 # OpenAI client
 openai_client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
-
-
-# get precision and recall
-def rate_performance(
-    prompt_num: int,
-    prompt_name: str,
-    full_prompt: str,
-    model: str
-):
-    
-    
-    precision = 0.3
-    recall = 0.4
-    # process
-    return precision, recall
-
 
 
 # Function to call OpenAI API
@@ -57,6 +42,7 @@ def get_openai_response(
             top_p = 1,
             frequency_penalty = 0,
             presence_penalty = 0,
+            seed=0,
         )
         return response.choices[0].message.content
 
@@ -90,18 +76,21 @@ def validate_articles(output: str) -> List[str]:
     return articles
 
 
-# get precision, recall
-def get_performance(
-    expected_article_ref: str,
-    returned_article_ref: str
-) -> (float, float):
-    # process
-    return 0.2, 0.3
-
-
 # average of results 
 def get_average_performance(
     prompt_num: int
 ) -> (float, float):
-    # process
-    return 0.22, 0.33
+    # Read Output_Comparison
+    print("[*] Reading Output_Comparison.xlsx")
+    file_path = 'Output_Comparison.xlsx'
+    xls = pd.ExcelFile(file_path)
+    articles_extraction_df = xls.parse("Results")
+
+    precision_column =  list(map(float, articles_extraction_df[f"{prompt_num}-Precision"]))
+    recall_column =  list(map(float, articles_extraction_df[f"{prompt_num}-Recall"]))
+
+    avg_precision = sum(precision_column) / len(precision_column)
+    avg_recall = sum(recall_column) / len(recall_column)
+    
+    return avg_precision, avg_recall
+
