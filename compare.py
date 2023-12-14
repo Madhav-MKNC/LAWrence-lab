@@ -40,9 +40,14 @@ def get_performance(
     if not human_articles_set or not predicted_artilces_set:
         return 0, 0 
     
-    human_articles = {extract_book(ref): extract_article(ref) for ref in human_articles_set}
-    predicted_articles = {extract_book(ref): extract_article(ref) for ref in predicted_artilces_set}
-    true_positives = {pred
+    human_articles = {
+        extract_book(ref): extract_article(ref) for ref in human_articles_set
+    }
+    predicted_articles = {
+        extract_book(ref): extract_article(ref) for ref in predicted_artilces_set
+    }
+    true_positives = {
+        pred
         for pred in predicted_articles
         for hum in human_articles
         if pred == hum and is_subset_article(human_articles[hum], predicted_articles[pred])
