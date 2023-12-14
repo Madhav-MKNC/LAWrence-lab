@@ -35,9 +35,9 @@ for _, prompt_row in overview_df.iterrows():
     full_prompt = prompt_row["Full Prompt"]
     used_model = prompt_row["Used model"]
     
-    print(prompt_num, prompt_name, used_model, full_prompt)
+    # print(prompt_num, prompt_name, used_model, full_prompt)
     
-    print(f"# Using {prompt_num}: {prompt_name}")
+    print(f"\n[#] Using {prompt_num}: {prompt_name}")
     
     # Add rows
     articles_column = f"{prompt_num}-Articles"
@@ -55,11 +55,14 @@ for _, prompt_row in overview_df.iterrows():
         situation = inputs_row["Situation"]
         question = inputs_row["Questions"]
         expected_article_ref = inputs_row["Relevant Articles"]
+        
+        situation = situation if str(situation).lower() != 'nan' else ""
+        question = question if str(question).lower() != 'nan' else ""
         expected_article_ref = expected_article_ref if str(expected_article_ref).lower() != 'nan' else ""
         
-        # print("##########")
+        # print("########################################")
         # print(type(expected_article_ref), expected_article_ref, str(expected_article_ref))
-        # print("##########")
+        # print("########################################")
         
         response = get_openai_response(
             prompt = full_prompt,
@@ -83,5 +86,5 @@ for _, prompt_row in overview_df.iterrows():
         
         # save results
         articles_extraction_df.to_excel(output_file_path, sheet_name="Results", index=False)
-        print("** Response saved")
+        print("[+] Response saved")
 

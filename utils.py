@@ -22,7 +22,7 @@ def get_openai_response(
     question: str,
     language: str = "German"
 ) -> str:
-    print(f"# INPUT:\n* SITUATION: {situation}\n* QUESTION: {question}")
+    print(f"\n# INPUT:\n* SITUATION: {str(situation)[0:50]}...\n* QUESTION: {str(question)[0:50]}...")
 
     messages = [
         {
@@ -85,6 +85,10 @@ def get_average_performance(
     xls = pd.ExcelFile(file_path)
     articles_extraction_df = xls.parse("Results")
 
+    # handle inputs 
+    ...
+    ...
+    ...
     precision_column =  list(map(float, articles_extraction_df[f"{prompt_num}-Precision"]))
     recall_column =  list(map(float, articles_extraction_df[f"{prompt_num}-Recall"]))
 

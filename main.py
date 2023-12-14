@@ -10,7 +10,7 @@ input_file_path = 'Validation.xlsx'
 output_file_path = 'Output_Performance.xlsx'
 
 # Read overview sheet
-print("# Reading Validation.xlsx sheet: 'Overview'")
+print("[+] Reading Validation.xlsx sheet: 'Overview'")
 xls = pd.ExcelFile(input_file_path)
 overview_df = xls.parse("Overview")
 
