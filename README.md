@@ -38,7 +38,7 @@ Every prompt should mention only this response format explicitly
 
 # Run
 
-For Extracting and comparing articles:
+For Extracting and comparing articles: (output will be saved as Output_Comparison.xlsx)
 
 <code>python extract_articles.py START_ROW END_ROW</code>
 
@@ -48,7 +48,7 @@ Example Usage:
 python extract_articles.py 1 3
 ```
 
-For mean performances:
+For mean performances: (output will be saved as Output_Performance.xlsx)
 
 ```
 python main.py

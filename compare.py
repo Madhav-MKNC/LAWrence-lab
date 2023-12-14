@@ -37,19 +37,11 @@ def get_performance(
     human_articles_set: set,
     predicted_artilces_set: set
 ) -> (float, float):
-    if not human_articles_set or predicted_artilces_set:
+    if not human_articles_set or not predicted_artilces_set:
         return 0, 0 
     
-    human_articles = {
-        {
-            extract_book(ref): extract_article(ref)
-        } for ref in human_articles_set
-    }
-    predicted_articles = {
-        {
-            extract_book(ref): extract_article(ref)
-        } for ref in predicted_artilces_set
-    }  
+    human_articles = {extract_book(ref): extract_article(ref) for ref in human_articles_set}
+    predicted_articles = {extract_book(ref): extract_article(ref) for ref in predicted_artilces_set}
     true_positives = {pred
         for pred in predicted_articles
         for hum in human_articles
@@ -68,4 +60,6 @@ def get_performance(
 
     precision = len(true_positives) / len(predicted_articles)
     recall = len(true_positives) / len(human_articles)
+    
+    print("$$$$$$$", precision, recall)
     return precision, recall

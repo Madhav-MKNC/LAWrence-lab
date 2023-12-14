@@ -9,7 +9,7 @@ from compare import get_performance
 
 # command line arguments
 start_row = 1
-end_row = 10
+end_row = 30
 # try:
 #     start_row = int(sys.argv[1])
 #     end_row = int(sys.argv[2])
@@ -30,14 +30,15 @@ articles_extraction_df = xls.parse("Articles Extraction")
 
 # extact articles
 for _, prompt_row in overview_df.iterrows():
-    prompt_num = int(prompt_row["Prompt"])
+    prompt_num = prompt_row["Prompt"]
     prompt_name = prompt_row["Prompt Name"]
     full_prompt = prompt_row["Full Prompt"]
     used_model = prompt_row["Used model"]
+
+    if str(prompt_num).lower() == 'nan' or str(prompt_name).lower() == 'nan' or str(full_prompt).lower() == 'nan' or str(used_model).lower() == 'nan': continue
     
-    # print(prompt_num, prompt_name, used_model, full_prompt)
-    
-    print(f"\n[#] Using {prompt_num}: {prompt_name}")
+    prompt_num = int(prompt_num)    
+    print(f"\n[prompt:model {prompt_num}] Using: {prompt_name}")
     
     # Add rows
     articles_column = f"{prompt_num}-Articles"
@@ -54,11 +55,11 @@ for _, prompt_row in overview_df.iterrows():
         
         situation = inputs_row["Situation"]
         question = inputs_row["Questions"]
-        expected_article_ref = inputs_row["Relevant Articles"]
+        expected_article_refs = inputs_row["Relevant Articles"]
         
-        situation = situation if str(situation).lower() != 'nan' else ""
-        question = question if str(question).lower() != 'nan' else ""
-        expected_article_ref = expected_article_ref if str(expected_article_ref).lower() != 'nan' else ""
+        if str(situation).lower() == 'nan': continue
+        if str(question).lower() == 'nan': question = ""
+        expected_article_refs = set(expected_article_refs.split("\n")) if str(expected_article_refs).lower() != 'nan' else {}
         
         # print("########################################")
         # print(type(expected_article_ref), expected_article_ref, str(expected_article_ref))
@@ -68,19 +69,18 @@ for _, prompt_row in overview_df.iterrows():
             prompt = full_prompt,
             model = used_model,
             situation = situation,
-            question = question
+            question = question,
+            index = index + 1
         )
-        
         predicted_article_refs = validate_articles(response)
-        expected_article_refs = set(expected_article_ref.strip().split("\n"))
         
         precision, recall = get_performance(
-            human_articles_set = expected_article_ref,
+            human_articles_set = expected_article_refs,
             predicted_artilces_set = predicted_article_refs
         )
         
         # write results
-        articles_extraction_df.at[index, articles_column] = predicted_article_refs
+        articles_extraction_df.at[index, articles_column] = "\n".join(predicted_article_refs)
         articles_extraction_df.at[index, precision_column] = precision
         articles_extraction_df.at[index, recall_column] = recall
         
