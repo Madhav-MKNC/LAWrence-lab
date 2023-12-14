@@ -5,7 +5,14 @@ Testing with _Archive/test_regex.py
 import re
 
 
-def extract_article(article_string):
+# def extract_with_openai(article_string: str):
+#     """
+#     Extracts {bookName: articleNum(minor)} with OpenAI API.
+#     """
+#     prompt = "Your task is to extract lawbook name and article num from the following string" ... ya ... "following set"
+
+
+def extract_article(article_string: str):
     """
     Extracts the article number and minor.
     """
@@ -16,7 +23,7 @@ def extract_article(article_string):
         print(f'\033[31m*** extract_article(): No article extracted from {article_string.lower()}\033[m')
 
 
-def extract_book(article_string):
+def extract_book(article_string: str):
     """
     Extracts the lawbook name.
     """
@@ -66,5 +73,5 @@ def get_performance(
     precision = len(true_positives) / len(predicted_articles)
     recall = len(true_positives) / len(human_articles)
     
-    print("$$$$$$$", precision, recall)
+    print("\033[31m[=]", precision, recall, "\033[m")
     return precision, recall

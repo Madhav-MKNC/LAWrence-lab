@@ -77,23 +77,24 @@ def validate_articles(output: str) -> set:
 
 # average of results 
 def get_average_performance(
-    prompt_num: int
+    prompt_num: int,
+    results_df: pd.DataFrame
 ) -> (float, float):
-    # Read Output_Comparison
-    print("[*] Reading Output_Comparison.xlsx")
-    file_path = 'Output_Comparison.xlsx'
-    xls = pd.ExcelFile(file_path)
-    articles_extraction_df = xls.parse("Results")
-
-    # handle inputs 
-    ...
-    ...
-    ...
-    precision_column =  list(map(float, articles_extraction_df[f"{prompt_num}-Precision"]))
-    recall_column =  list(map(float, articles_extraction_df[f"{prompt_num}-Recall"]))
-
-    avg_precision = sum(precision_column) / len(precision_column)
-    avg_recall = sum(recall_column) / len(recall_column)
+    # mean precision
+    sum_p = 0
+    total_p = 0
+    for p in results_df[f"{prompt_num}-Precision"]:
+        if str(p).lower() != 'nan':
+            sum_p += float(p)
+            total_p += 1
     
-    return avg_precision, avg_recall
+    # mean recall
+    sum_r = 0
+    total_r = 0
+    for n in results_df[f"{prompt_num}-Recall"]:
+        if str(n).lower() != 'nan':
+            sum_r += float(n)
+            total_r += 1
+    
+    return sum_p/total_p, sum_r/total_r
 
