@@ -9,7 +9,7 @@ from compare import get_performance
 
 # command line arguments
 start_row = 1
-end_row = 2
+end_row = 10
 # try:
 #     start_row = int(sys.argv[1])
 #     end_row = int(sys.argv[2])
@@ -30,10 +30,12 @@ articles_extraction_df = xls.parse("Articles Extraction")
 
 # extact articles
 for _, prompt_row in overview_df.iterrows():
-    prompt_num = int(prompt_row["Prompt"]),
-    prompt_name = prompt_row["Prompt Name"],
-    full_prompt = prompt_row["Full Prompt"],
+    prompt_num = int(prompt_row["Prompt"])
+    prompt_name = prompt_row["Prompt Name"]
+    full_prompt = prompt_row["Full Prompt"]
     used_model = prompt_row["Used model"]
+    
+    print(prompt_num, prompt_name, used_model, full_prompt)
     
     print(f"# Using {prompt_num}: {prompt_name}")
     
@@ -53,6 +55,11 @@ for _, prompt_row in overview_df.iterrows():
         situation = inputs_row["Situation"]
         question = inputs_row["Questions"]
         expected_article_ref = inputs_row["Relevant Articles"]
+        expected_article_ref = expected_article_ref if str(expected_article_ref).lower() != 'nan' else ""
+        
+        # print("##########")
+        # print(type(expected_article_ref), expected_article_ref, str(expected_article_ref))
+        # print("##########")
         
         response = get_openai_response(
             prompt = full_prompt,
