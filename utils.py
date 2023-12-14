@@ -7,7 +7,6 @@ load_dotenv()
 
 import pandas as pd
 import json
-from typing import List
 from openai import OpenAI, OpenAIError
 
 
@@ -52,7 +51,7 @@ def get_openai_response(
 
 
 # Validate gpt response
-def validate_articles(output: str) -> List[str]:
+def validate_articles(output: str) -> set:
     """
     Expects the output:str returned from openai API call in the following structure:-
     {
@@ -62,14 +61,14 @@ def validate_articles(output: str) -> List[str]:
         ]
     }
     """
-    articles = []
+    articles = set()
     try:
         output = json.loads(output)
         output = list(output.values())[0]
         print("\033[93m[+] Articles retured from GPT:")
         print(str(output) + "\033[m")
         for i in output:
-            articles.append(i["article_ref"])
+            articles.add(i["article_ref"])
         print('[+] Validated articles returned from GPT.')
     except Exception as e:
         print('\033[31m*** validate_articles():', str(e), "\033[m")

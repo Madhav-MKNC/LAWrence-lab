@@ -60,15 +60,17 @@ for _, prompt_row in overview_df.iterrows():
             situation = situation,
             question = question
         )
-        returned_article_ref = validate_articles(response)
+        
+        predicted_article_refs = validate_articles(response)
+        expected_article_refs = set(expected_article_ref.strip().split("\n"))
         
         precision, recall = get_performance(
-            expected_article_ref = expected_article_ref,
-            returned_article_ref = returned_article_ref
+            human_articles_set = expected_article_ref,
+            predicted_artilces_set = predicted_article_refs
         )
         
         # write results
-        articles_extraction_df.at[index, articles_column] = returned_article_ref
+        articles_extraction_df.at[index, articles_column] = predicted_article_refs
         articles_extraction_df.at[index, precision_column] = precision
         articles_extraction_df.at[index, recall_column] = recall
         
