@@ -42,7 +42,7 @@ def get_openai_response(
             top_p = 1,
             frequency_penalty = 0,
             presence_penalty = 0,
-            seed=0,
+            seed = 0,
         )
         return response.choices[0].message.content
 
