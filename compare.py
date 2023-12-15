@@ -50,6 +50,14 @@ def get_performance(
         print("\033[32m[=]", precision, recall, "\033[m")
         return precision, recall
     
+    # printing for comparing visually
+    print(f"\033[34mHuman     : {human_articles_set}\033[m")
+    print(f"\033[36mGenerated : {predicted_artilces_set}\033[m")
+    ...
+    ...
+    # below code only returns 0,1
+    ...
+    ...
     human_articles = {
         extract_book(ref): extract_article(ref) for ref in human_articles_set
     }
