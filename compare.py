@@ -19,16 +19,17 @@ def extract_article(article_string: str):
     """
     article_match = re.search(r'art\.\s*(\d+[a-z]*)', article_string.lower())
     if article_match:
-        return article_match.group(1)
+        return article_match.group(1).lower()
     else:
         print(f'\033[31m*** extract_article(): No article extracted from {article_string.lower()}\033[m')
+        exit()
 
 
 def extract_book(article_string: str):
     """
     Extracts the lawbook name.
     """
-    book_name = re.sub(r'art\.\s*(\d+[a-z]*)|([a-z]+\.\s*\d+[a-z]*)', '', article_string.lower()).strip()
+    book_name = re.sub(r'art\.\s*(\d+[a-z]*)|([a-z]+\.\s*\d+[a-z]*)', '', article_string.lower()).strip().lower()
     return book_name
 
 
@@ -51,24 +52,25 @@ def get_performance(
         return precision, recall
     
     # printing for comparing visually
-    print(f"\033[34mHuman     : {human_articles_set}\033[m")
-    print(f"\033[36mGenerated : {predicted_artilces_set}\033[m")
-    ...
-    ...
-    # below code only returns 0,1
-    ...
-    ...
+    print(f"\033[34m*** Human     : {human_articles_set}\033[m")
+    print(f"\033[36m*** Generated : {predicted_artilces_set}\033[m")
+
     human_articles = {
         extract_book(ref): extract_article(ref) for ref in human_articles_set
     }
     predicted_articles = {
         extract_book(ref): extract_article(ref) for ref in predicted_artilces_set
     }
+    
+    # printing for comparing visually
+    print(f"\033[30m*** Human     : {human_articles}\033[m")
+    print(f"\033[30m*** Generated : {predicted_articles}\033[m")
+    
     true_positives = {
-        pred
-        for pred in predicted_articles
-        for hum in human_articles
-        if pred == hum and is_subset_article(human_articles[hum], predicted_articles[pred])
+        pbookname
+        for pbookname in predicted_articles
+        for hbookname in human_articles
+        if pbookname == hbookname and is_subset_article(human_articles[hbookname], predicted_articles[pbookname])
     }
   
     # human_articles = {extract_article(s) for s in human_articles_set}

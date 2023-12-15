@@ -1,10 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import sys
 import pandas as pd
 from utils import get_openai_response, validate_articles
 from compare import get_performance
 
+
+# command line arguments
+try:
+    start_row = int(sys.argv[1])
+    end_row = int(sys.argv[2])
+except:
+    print(f"USAGE: python {sys.argv[0]} START_ROW END_ROW\nExample: python {sys.argv[0]} 1 3")
+    sys.exit()
 
 # numerical column indexes
 col_mapping = {chr(65+i).upper(): i for i in range(1,27)}  
@@ -20,8 +29,12 @@ overview_df = xls.parse("Overview")
 articles_extraction_df = xls.parse("Ground truth")
 
 
+
 # extact articles
-for prompt_index, prompt_row in overview_df.iterrows():
+# for prompt_index, prompt_row in overview_df.iterrows():
+for prompt_index in range(start_row - 1, end_row):
+    prompt_row = overview_df.iloc[prompt_index]
+    
     # read prompts
     prompt_num = prompt_row["Prompt"]
     prompt_name = prompt_row["Prompt Name"]
@@ -49,9 +62,9 @@ for prompt_index, prompt_row in overview_df.iterrows():
     recall_column = col_mapping[prompt_row["Col. Recall"]]
     
     # # output column names
-    # predicted_article_column = f"{prompt_num}-Articles"
-    # precision_column = f"{prompt_num}-Precision"
-    # recall_column = f"{prompt_num}-Recall"
+    # predicted_article_column_head = f"{prompt_num}-Articles"
+    # precision_column_head = f"{prompt_num}-Precision"
+    # recall_column_head = f"{prompt_num}-Recall"
     
     # # create output columns
     # articles_extraction_df[predicted_article_column] = None
