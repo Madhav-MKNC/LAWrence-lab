@@ -67,11 +67,6 @@ for prompt_index in range(start_row - 1, end_row):
     # recall_column_head = f"{prompt_num}-Recall"
     
     # # create output columns
-    # articles_extraction_df.iat[predicted_article_column] = None
-    # articles_extraction_df[precision_column] = None
-    # articles_extraction_df[recall_column] = None
-    
-    # # create output columns
     # articles_extraction_df[predicted_article_column] = None
     # articles_extraction_df[precision_column] = None
     # articles_extraction_df[recall_column] = None

@@ -55,22 +55,18 @@ def get_performance(
     print(f"\033[34m*** Human     : {human_articles_set}\033[m")
     print(f"\033[36m*** Generated : {predicted_artilces_set}\033[m")
 
-    human_articles = {
-        extract_book(ref): extract_article(ref) for ref in human_articles_set
-    }
-    predicted_articles = {
-        extract_book(ref): extract_article(ref) for ref in predicted_artilces_set
-    }
+    human_articles = [(extract_book(ref), extract_article(ref)) for ref in human_articles_set]
+    predicted_articles = [(extract_book(ref), extract_article(ref)) for ref in predicted_artilces_set]
     
     # printing for comparing visually
     print(f"\033[30m*** Human     : {human_articles}\033[m")
     print(f"\033[30m*** Generated : {predicted_articles}\033[m")
     
     true_positives = {
-        pbookname
-        for pbookname in predicted_articles
-        for hbookname in human_articles
-        if pbookname == hbookname and is_subset_article(human_articles[hbookname], predicted_articles[pbookname])
+        (pbookname, particle)
+        for (pbookname, particle) in predicted_articles
+        for (hbookname, harticle) in human_articles
+        if pbookname == hbookname and is_subset_article(harticle, particle)
     }
   
     # human_articles = {extract_article(s) for s in human_articles_set}

@@ -66,7 +66,7 @@ def validate_articles(output: str) -> set:
     try:
         output = json.loads(output)
         output = list(output.values())[0]
-        print(f"\033[93m* Articles retured from GPT: {output}\033[m")
+        # print(f"\033[93m* Articles retured from GPT: {output}\033[m")
         for i in output:
             articles.add(i["article_ref"])
         print('[+] Validated articles returned from GPT.')

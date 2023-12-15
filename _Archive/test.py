@@ -11,7 +11,9 @@ output_file_path = 'Output_Validation.xlsx'
 print("# Reading Validation.xlsx sheet: 'Overview'")
 file_path = 'Validation.xlsx'
 xls = pd.ExcelFile(input_file_path)
-df = xls.parse("Overview")
+df = xls.parse("Ground truth")
+
+print(df)
 
 # new_column1 = [1, 2, 3]  # Replace with your data
 # new_column2 = ['A', 'B', 'C']  # Replace with your data
