@@ -12,7 +12,7 @@ try:
     start_row = int(sys.argv[1])
     end_row = int(sys.argv[2])
 except:
-    print(f"USAGE: python {sys.argv[0]} START_ROW END_ROW\nExample: python {sys.argv[0]} 1 3")
+    print(f"\033[31mUSAGE: python {sys.argv[0]} START_ROW END_ROW\nExample: python {sys.argv[0]} 1 3\033[m")
     sys.exit()
 
 # numerical column indexes
@@ -65,6 +65,11 @@ for prompt_index in range(start_row - 1, end_row):
     # predicted_article_column_head = f"{prompt_num}-Articles"
     # precision_column_head = f"{prompt_num}-Precision"
     # recall_column_head = f"{prompt_num}-Recall"
+    
+    # # create output columns
+    # articles_extraction_df.iat[predicted_article_column] = None
+    # articles_extraction_df[precision_column] = None
+    # articles_extraction_df[recall_column] = None
     
     # # create output columns
     # articles_extraction_df[predicted_article_column] = None
