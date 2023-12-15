@@ -8,6 +8,7 @@ import re
 # def extract_with_openai(article_string: str):
 #     """
 #     Extracts {bookName: articleNum(minor)} with OpenAI API.
+#     NOTE: this utility is on hold currently 
 #     """
 #     prompt = "Your task is to extract lawbook name and article num from the following string" ... ya ... "following set"
 
@@ -45,7 +46,9 @@ def get_performance(
     predicted_artilces_set: set
 ) -> (float, float):
     if not human_articles_set or not predicted_artilces_set:
-        return 0, 0 
+        precision, recall = 0, 0
+        print("\033[32m[=]", precision, recall, "\033[m")
+        return precision, recall
     
     human_articles = {
         extract_book(ref): extract_article(ref) for ref in human_articles_set
@@ -73,5 +76,5 @@ def get_performance(
     precision = len(true_positives) / len(predicted_articles)
     recall = len(true_positives) / len(human_articles)
     
-    print("\033[31m[=]", precision, recall, "\033[m")
+    print("\033[32m[=]", precision, recall, "\033[m")
     return precision, recall

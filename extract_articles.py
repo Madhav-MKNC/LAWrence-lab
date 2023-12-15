@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import sys
 import pandas as pd
 from utils import get_openai_response, validate_articles
 from compare import get_performance
 
+
+# numerical column indexes
+col_mapping = {chr(65+i).upper(): i for i in range(26)}  
 
 # command line arguments
 start_row = 1
@@ -25,11 +27,12 @@ output_file_path = "Output_Comparison.xlsx"
 print("[*] Reading Validation.xlsx")
 xls = pd.ExcelFile(input_file_path)
 overview_df = xls.parse("Overview")
-articles_extraction_df = xls.parse("Articles Extraction")
+articles_extraction_df = xls.parse("Ground truth")
 
 
 # extact articles
-for _, prompt_row in overview_df.iterrows():
+for prompt_index, prompt_row in overview_df.iterrows():
+    # read prompts
     prompt_num = prompt_row["Prompt"]
     prompt_name = prompt_row["Prompt Name"]
     full_prompt = prompt_row["Full Prompt"]
@@ -37,25 +40,42 @@ for _, prompt_row in overview_df.iterrows():
 
     if str(prompt_num).lower() == 'nan' or str(prompt_name).lower() == 'nan' or str(full_prompt).lower() == 'nan' or str(used_model).lower() == 'nan': continue
     
-    prompt_num = int(prompt_num)    
+    prompt_num = int(prompt_num)   
+    prompt_name = prompt_name.strip()
+    full_prompt = full_prompt.strip()
+    used_model = used_model.strip() 
     print(f"\n[prompt:model {prompt_num}] Using: {prompt_name}")
     
-    # Add rows
-    articles_column = f"{prompt_num}-Articles"
-    precision_column = f"{prompt_num}-Precision"
-    recall_column = f"{prompt_num}-Recall"
+    # which columsn to read input from
+    situation_column = col_mapping[prompt_row["Col. Situation"]]
+    questions_column = col_mapping[prompt_row["Col. Question"]]
+    human_articles_column = col_mapping[prompt_row["Col. Relevant Articles"]]
     
-    articles_extraction_df[articles_column] = None
+    predicted_article_column = col_mapping[prompt_row["Col. Generated articles"]]
+    precision_column = col_mapping[prompt_row["Col. Precision"]]
+    recall_column = col_mapping[prompt_row["Col. Recall"]]
+    
+    # # which columns to write input
+    # predicted_article_column = f"{prompt_num}-Articles"
+    # precision_column = f"{prompt_num}-Precision"
+    # recall_column = f"{prompt_num}-Recall"
+    
+    articles_extraction_df[predicted_article_column] = None
     articles_extraction_df[precision_column] = None
     articles_extraction_df[recall_column] = None
     
     # inputs to run tests on 
-    for index in range(start_row - 1, end_row):
-        inputs_row = articles_extraction_df.iloc[index]
+    for inputs_index, inputs_row in articles_extraction_df.iterrows():
+    # for inputs_index in range(start_row - 1, end_row):
+    #     inputs_row = articles_extraction_df.iloc[inputs_index]
         
-        situation = inputs_row["Situation"]
-        question = inputs_row["Questions"]
-        expected_article_refs = inputs_row["Relevant Articles"]
+        # situation = inputs_row[situation_column]
+        # question = inputs_row[questions_column]
+        # expected_article_refs = inputs_row[human_articles_column]
+        
+        situation = articles_extraction_df.iat[inputs_index, situation_column]
+        question = articles_extraction_df.iat[inputs_index, questions_column]
+        expected_article_refs = articles_extraction_df.iat[inputs_index, human_articles_column]
         
         if str(situation).lower() == 'nan': continue
         if str(question).lower() == 'nan': question = ""
@@ -70,7 +90,7 @@ for _, prompt_row in overview_df.iterrows():
             model = used_model,
             situation = situation,
             question = question,
-            index = index + 1
+            index = inputs_index + 1
         )
         predicted_article_refs = validate_articles(response)
         
@@ -79,11 +99,21 @@ for _, prompt_row in overview_df.iterrows():
             predicted_artilces_set = predicted_article_refs
         )
         
-        # write results
-        articles_extraction_df.at[index, articles_column] = "\n".join(predicted_article_refs)
-        articles_extraction_df.at[index, precision_column] = precision
-        articles_extraction_df.at[index, recall_column] = recall
+        # # write results
+        # articles_extraction_df.at[inputs_index, predicted_article_column] = "\n".join(predicted_article_refs)
+        # articles_extraction_df.at[inputs_index, precision_column] = precision
+        # articles_extraction_df.at[inputs_index, recall_column] = recall
         
+        ...
+        # NOTE: error in I/O by column indexes (I, J, K)
+        ...
+        articles_extraction_df.iat[inputs_index, 0] = "\n".join(predicted_article_refs)
+        articles_extraction_df.iat[inputs_index, 1] = precision
+        articles_extraction_df.iat[inputs_index, 2] = recall
+        ...
+        # NOTE: error in I/O by column indexes (I, J, K)
+        ...
+
         # save results
         articles_extraction_df.to_excel(output_file_path, sheet_name="Results", index=False)
         print("[+] Response saved")
