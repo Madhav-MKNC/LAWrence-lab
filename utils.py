@@ -74,27 +74,3 @@ def validate_articles(output: str) -> set:
         print('\033[31m*** validate_articles():', str(e), "\033[m")
     return articles
 
-
-# average of results 
-def get_average_performance(
-    prompt_num: int,
-    results_df: pd.DataFrame
-) -> (float, float):
-    # mean precision
-    sum_p = 0
-    total_p = 0
-    for p in results_df[f"{prompt_num}-Precision"]:
-        if str(p).lower() != 'nan':
-            sum_p += float(p)
-            total_p += 1
-    
-    # mean recall
-    sum_r = 0
-    total_r = 0
-    for n in results_df[f"{prompt_num}-Recall"]:
-        if str(n).lower() != 'nan':
-            sum_r += float(n)
-            total_r += 1
-    
-    return sum_p/total_p, sum_r/total_r
-

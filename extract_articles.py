@@ -110,9 +110,9 @@ for prompt_index in range(start_row, end_row + 1):
         # articles_extraction_df.at[inputs_index, recall_column] = recall
 
         # write results
-        articles_extraction_df[predicted_article_column_head] = "\n".join(predicted_article_refs)
-        articles_extraction_df[precision_column_head] = precision
-        articles_extraction_df[recall_column_head] = recall
+        articles_extraction_df.at[inputs_index, predicted_article_column_head] = "\n".join(predicted_article_refs)
+        articles_extraction_df.at[inputs_index, precision_column_head] = precision
+        articles_extraction_df.at[inputs_index, recall_column_head] = recall
 
         # save results
         articles_extraction_df.to_excel(output_file_path, sheet_name="Results", index=False)

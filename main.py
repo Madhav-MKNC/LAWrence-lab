@@ -3,7 +3,6 @@
 
 import sys
 import pandas as pd
-from utils import get_average_performance
 
 # command line arguments
 try:
@@ -67,11 +66,6 @@ for index in range(start_row, end_row + 1):
             total_r += 1
     
     avg_precision, avg_recall = sum_p/total_p, sum_r/total_r
-
-    # avg_precision, avg_recall = get_average_performance(
-    #     prompt_num = int(row["Prompt"]),
-    #     results_df = comparison_df
-    # )
 
     # Update the "Precision" and "Recall" columns with the calculated values
     overview_df.at[index, 'Precision'] = avg_precision
