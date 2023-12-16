@@ -9,8 +9,8 @@ from compare import get_performance
 
 # command line arguments
 try:
-    start_row = int(sys.argv[1])
-    end_row = int(sys.argv[2])
+    start_row = int(sys.argv[1]) - 1
+    end_row = int(sys.argv[2]) - 1
 except:
     print(f"\033[31mUSAGE: python {sys.argv[0]} START_ROW END_ROW\nExample: python {sys.argv[0]} 1 3\033[m")
     sys.exit()
