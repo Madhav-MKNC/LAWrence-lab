@@ -50,6 +50,10 @@ python extract_articles.py 1 3
 
 For mean performances: (output will be saved as Output_Performance.xlsx)
 
+<code>python main.py START_ROW END_ROW</code>
+
+Example Usage:
+
 ```
-python main.py
+python main.py 1 3
 ```

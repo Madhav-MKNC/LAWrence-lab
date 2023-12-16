@@ -51,12 +51,26 @@ def get_performance(
         print("\033[32m[=]", precision, recall, "\033[m")
         return precision, recall
     
-    # printing for comparing visually
-    print(f"\033[34m*** Human     : {human_articles_set}\033[m")
-    print(f"\033[36m*** Generated : {predicted_artilces_set}\033[m")
+    # # printing for comparing visually
+    # print(f"\033[34m*** Human     : {human_articles_set}\033[m")
+    # print(f"\033[36m*** Generated : {predicted_artilces_set}\033[m")
 
-    human_articles = [(extract_book(ref), extract_article(ref)) for ref in human_articles_set]
-    predicted_articles = [(extract_book(ref), extract_article(ref)) for ref in predicted_artilces_set]
+    # human articles 
+    human_articles = []
+    for ref in human_articles_set:
+        x = (extract_book(ref), extract_article(ref))
+        if x not in human_articles:
+            human_articles.append(x)
+    
+    # predicted articles
+    predicted_articles = []
+    for ref in predicted_artilces_set:
+        x = (extract_book(ref), extract_article(ref))
+        if x not in predicted_articles:
+            predicted_articles.append(x)
+    
+    # human_articles = [(extract_book(ref), extract_article(ref)) for ref in human_articles_set]
+    # predicted_articles = [(extract_book(ref), extract_article(ref)) for ref in predicted_artilces_set]
     
     # printing for comparing visually
     print(f"\033[30m*** Human     : {human_articles}\033[m")
