@@ -13,20 +13,14 @@ except:
     sys.exit()
 
 # xlsx files
-input_file_path = 'Validation.xlsx'
-comparison_results_path = 'Output_Comparison.xlsx'
-output_file_path = 'Output_Performance.xlsx'
+file_path = 'Validation.xlsx'
 
 # Read overview sheet
-print("[*] Reading Validation.xlsx sheet: 'Overview'")
-xls = pd.ExcelFile(input_file_path)
+print("[*] Reading Validation.xlsx sheet")
+xls = pd.ExcelFile(file_path)
 overview_df = xls.parse("Overview")
+articles_extraction_df = xls.parse("Ground truth")
 
-# Read comparison results 
-print("[*] Reading Output_Comparison.xlsx")
-xls = pd.ExcelFile(comparison_results_path)
-comparison_df = xls.parse("Results")
-    
 # Calculating average performance
 # for index, row in overview_df.iterrows():
 for index in range(start_row, end_row + 1):
@@ -43,8 +37,8 @@ for index in range(start_row, end_row + 1):
     # fetching performance from Output_Comparison.xlsx
     print(f"[*] [prompt:model] {prompt_num}")
     try:
-        precision_column = comparison_df[f"{prompt_num}-Precision"]
-        recall_column = comparison_df[f"{prompt_num}-Recall"]
+        precision_column = articles_extraction_df[f"{prompt_num}-Precision"]
+        recall_column = articles_extraction_df[f"{prompt_num}-Recall"]
     except Exception as e:
         print("\033[31m[-]This [prompt:model] has not been evaluated yet.", str(e), "\033[m")
         continue
@@ -73,6 +67,8 @@ for index in range(start_row, end_row + 1):
 
     # Saving output
     print("[*] Saving Ouput")
-    overview_df.to_excel(output_file_path, sheet_name="Results", index=False)
-    print("[+] Saved.")
+    with pd.ExcelWriter(file_path, mode='a', engine='openpyxl', if_sheet_exists='replace') as writer:
+        overview_df.to_excel(writer, sheet_name='Overview', index=False)
+        articles_extraction_df.to_excel(writer, sheet_name='Ground truth', index=False)
+    print("[+] Response saved")
 
