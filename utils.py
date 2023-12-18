@@ -5,7 +5,6 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-import pandas as pd
 import json
 from openai import OpenAI, OpenAIError
 

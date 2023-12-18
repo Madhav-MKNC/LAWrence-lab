@@ -68,9 +68,10 @@ for prompt_index in range(start_row, end_row + 1):
     recall_column_head = f"{prompt_num}-Recall"
     
     # create output columns
-    articles_extraction_df[predicted_article_column_head] = None
-    articles_extraction_df[precision_column_head] = None
-    articles_extraction_df[recall_column_head] = None
+    if predicted_article_column_head not in articles_extraction_df.columns or precision_column_head not in articles_extraction_df.columns or recall_column_head not in articles_extraction_df.columns:
+        articles_extraction_df[predicted_article_column_head] = None
+        articles_extraction_df[precision_column_head] = None
+        articles_extraction_df[recall_column_head] = None
     
     # inputs to run tests on 
     for inputs_index, inputs_row in articles_extraction_df.iterrows():
