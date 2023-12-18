@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import os
+import shutil
+import time
 import sys
 import pandas as pd
 
@@ -14,6 +17,12 @@ except:
 
 # xlsx files
 file_path = 'Validation.xlsx'
+
+# create backup for Validation.xlsx
+source_file_path = file_path
+if not os.path.exists("bak"): os.makedirs("bak")
+destination_file_path = f"bak/{time.time()}{source_file_path}"
+shutil.copyfile(source_file_path, destination_file_path)
 
 # Read overview sheet
 print("[*] Reading Validation.xlsx sheet")

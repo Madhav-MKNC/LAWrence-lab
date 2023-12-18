@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import os
+import shutil
+import time
 import sys
 import pandas as pd
 from utils import get_openai_response, validate_articles
@@ -20,6 +23,12 @@ col_mapping = {chr(65+i).upper(): i for i in range(1,27)}
 
 # xlsx files
 file_path = 'Validation.xlsx'
+
+# create backup for Validation.xlsx
+source_file_path = file_path
+if not os.path.exists("bak"): os.makedirs("bak")
+destination_file_path = f"bak/{time.time()}{source_file_path}"
+shutil.copyfile(source_file_path, destination_file_path)
 
 # Read Articles Extraction sheet
 print("[*] Reading Validation.xlsx")
