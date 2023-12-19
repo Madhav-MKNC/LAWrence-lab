@@ -18,12 +18,19 @@ def create_backup(file_path):
     shutil.copyfile(source_file_path, destination_file_path)
 
 
+# save output files
+def save_output(df, output_file_path):
+    if not os.path.exists("Outputs"): 
+        os.makedirs("Outputs")
+    df.to_excel(output_file_path, sheet_name="Results", index=False)
+
+
 # extact articles
 def extract_articles(
     prompt_index,
     overview_df,
     articles_extraction_df,
-    file_path
+    output_file_path
 ):
     prompt_row = overview_df.iloc[prompt_index]
     
@@ -98,8 +105,9 @@ def extract_articles(
 
         # save results
         print("[*] Saving response...")
-        with pd.ExcelWriter(file_path, mode='a', engine='openpyxl', if_sheet_exists='replace') as writer:
-            overview_df.to_excel(writer, sheet_name='Overview', index=False)
-            articles_extraction_df.to_excel(writer, sheet_name='Ground truth', index=False)
+        save_output(
+            df = articles_extraction_df,
+            output_file_path = output_file_path
+        )
         print("[+] Response saved")
 
