@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os
-import shutil
-import time
+from utils.extract_articles import create_backup, extract_articles
 import sys
 import pandas as pd
+
 
 # command line arguments
 try:
@@ -15,14 +14,11 @@ except:
     print(f"\033[31mUSAGE: python {sys.argv[0]} START_ROW END_ROW\nExample: python {sys.argv[0]} 1 3\033[m")
     sys.exit()
 
+
 # xlsx files
 file_path = 'Validation.xlsx'
+create_backup(file_path)
 
-# create backup for Validation.xlsx
-source_file_path = file_path
-if not os.path.exists("bak"): os.makedirs("bak")
-destination_file_path = f"bak/{time.time()}{source_file_path}"
-shutil.copyfile(source_file_path, destination_file_path)
 
 # Read overview sheet
 print("[*] Reading Validation.xlsx sheet")
@@ -30,8 +26,24 @@ xls = pd.ExcelFile(file_path)
 overview_df = xls.parse("Overview")
 articles_extraction_df = xls.parse("Ground truth")
 
+
+# extracting articles and evualutating performance
+print("\n####################################################")
+print("## Extracting articles and Evaluating performance ##")
+print("####################################################")
+for prompt_index in range(start_row, end_row + 1):
+    extract_articles(
+        prompt_index = prompt_index,
+        overview_df = overview_df,
+        articles_extraction_df = articles_extraction_df,
+        file_path = file_path
+    )
+
+
 # Calculating average performance
-# for index, row in overview_df.iterrows():
+print("\n#####################################")
+print("## Calculating average performance ##")
+print("#####################################")
 for index in range(start_row, end_row + 1):
     print(f"\n[*] Reading row no. {index + 1}")
     
