@@ -12,6 +12,8 @@ Your output will always be only a JSON list of relevant law articles along with 
     ]
 }}
 
+Note that bookname always has to be in the end only.
+
 Legal Situation:
 {situation}
 

@@ -53,11 +53,11 @@ def get_openai_response(
 # Validate gpt response
 def validate_articles(output: str) -> set:
     """
-    Expects the output:str returned from openai API call in the following structure:-
+    Expects the output:str returned from openai API call in the following structure (bookname at end):-
     {
         "some key": [
-            {"article_ref": "CO ART. 337"},
-            {"article_ref": "OR ART. 12a Abs. 2"}
+            {"article_ref": "ART. 337 CO"},
+            {"article_ref": "ART. 12a Abs. 2 OR"}
         ]
     }
     """
