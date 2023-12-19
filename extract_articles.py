@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import os
+import shutil
+import time
 import sys
 import pandas as pd
 from utils import get_openai_response, validate_articles
@@ -19,12 +22,17 @@ except:
 col_mapping = {chr(65+i).upper(): i for i in range(1,27)}  
 
 # xlsx files
-input_file_path = 'Validation.xlsx'
-output_file_path = "Output_Comparison.xlsx"
+file_path = 'Validation.xlsx'
+
+# create backup for Validation.xlsx
+source_file_path = file_path
+if not os.path.exists("bak"): os.makedirs("bak")
+destination_file_path = f"bak/{time.time()}{source_file_path}"
+shutil.copyfile(source_file_path, destination_file_path)
 
 # Read Articles Extraction sheet
 print("[*] Reading Validation.xlsx")
-xls = pd.ExcelFile(input_file_path)
+xls = pd.ExcelFile(file_path)
 overview_df = xls.parse("Overview")
 articles_extraction_df = xls.parse("Ground truth")
 
@@ -116,6 +124,9 @@ for prompt_index in range(start_row, end_row + 1):
         articles_extraction_df.at[inputs_index, recall_column_head] = recall
 
         # save results
-        articles_extraction_df.to_excel(output_file_path, sheet_name="Results", index=False)
+        print("[*] Saving response...")
+        with pd.ExcelWriter(file_path, mode='a', engine='openpyxl', if_sheet_exists='replace') as writer:
+            overview_df.to_excel(writer, sheet_name='Overview', index=False)
+            articles_extraction_df.to_excel(writer, sheet_name='Ground truth', index=False)
         print("[+] Response saved")
 
