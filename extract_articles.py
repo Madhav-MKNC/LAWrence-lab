@@ -73,7 +73,10 @@ def extract_articles(
         # validate inputs
         if str(situation).lower() == 'nan': continue
         question = question.strip() if str(question).lower() != 'nan' else ""
-        expected_article_refs = set(expected_article_refs.split("\n")) if str(expected_article_refs).lower() != 'nan' else {}
+        human_articles_set = set()
+        if str(expected_article_refs).lower() != "nan":
+            for i in expected_article_refs.split("\n"):
+                human_articles_set.add(i.strip())
 
         # predict articles with openai
         response = get_openai_response(
