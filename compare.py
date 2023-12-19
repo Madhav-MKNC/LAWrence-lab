@@ -23,11 +23,10 @@ def extract_book(article_string: str) -> str:
     Extracts the name of the law book.
     Assumptions: The book name is expected to be at the start or end of the string only.
     Approach: If the string starts with 'art.', then the book name must be at the end; otherwise, the book name will be at the beginning.
+    Final Conclusion: Bookname will always be at the end.
     """
     article_string = article_string.lower()
-    if article_string.startswith('art.'):
-        return str(article_string.split(" ")[-1])
-    return str(article_string.split(" ")[0])
+    return str(article_string.split(" ")[-1])
     
     
 
