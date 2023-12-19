@@ -26,7 +26,7 @@ print("[*] Reading Validation.xlsx sheet")
 xls = pd.ExcelFile(file_path)
 overview_df = xls.parse("Overview")
 articles_extraction_df = xls.parse("Ground truth")
-original_ground_truth = articles_extraction_df
+original_df = articles_extraction_df.copy()
 
 
 # extracting articles and evualutating performance
@@ -37,7 +37,7 @@ for prompt_index in range(start_row, end_row + 1):
     extract_articles(
         prompt_index = prompt_index,
         overview_df = overview_df,
-        articles_extraction_df = articles_extraction_df,
+        ground_truth_df = articles_extraction_df,
         output_file_path = output_file_path
     )
 
@@ -92,7 +92,6 @@ for index in range(start_row, end_row + 1):
     print("[*] Saving Ouput")
     with pd.ExcelWriter(file_path, mode='a', engine='openpyxl', if_sheet_exists='replace') as writer:
         overview_df.to_excel(writer, sheet_name='Overview', index=False)
-        print(original_ground_truth)
-        original_ground_truth.to_excel(writer, sheet_name='Ground truth', index=False)
+        original_df.to_excel(writer, sheet_name='Ground truth', index=False)
     print("[+] Response saved")
 

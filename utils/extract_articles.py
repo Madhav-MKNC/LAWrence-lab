@@ -28,7 +28,7 @@ def save_output(df, output_file_path):
 def extract_articles(
     prompt_index,
     overview_df,
-    articles_extraction_df,
+    ground_truth_df,
     output_file_path
 ):
     prompt_row = overview_df.iloc[prompt_index]
@@ -62,17 +62,17 @@ def extract_articles(
     recall_column_head = f"{prompt_num}-Recall"
     
     # create output columns
-    if predicted_article_column_head not in articles_extraction_df.columns or precision_column_head not in articles_extraction_df.columns or recall_column_head not in articles_extraction_df.columns:
-        articles_extraction_df[predicted_article_column_head] = None
-        articles_extraction_df[precision_column_head] = None
-        articles_extraction_df[recall_column_head] = None
+    if predicted_article_column_head not in ground_truth_df.columns or precision_column_head not in ground_truth_df.columns or recall_column_head not in ground_truth_df.columns:
+        ground_truth_df[predicted_article_column_head] = None
+        ground_truth_df[precision_column_head] = None
+        ground_truth_df[recall_column_head] = None
     
     # inputs to run tests on 
-    for inputs_index, inputs_row in articles_extraction_df.iterrows():
+    for inputs_index, inputs_row in ground_truth_df.iterrows():
         # read inputs
-        situation = articles_extraction_df.at[inputs_index, situation_column_head]
-        question = articles_extraction_df.at[inputs_index, questions_column_head]
-        expected_article_refs = articles_extraction_df.at[inputs_index, human_articles_column_head]
+        situation = ground_truth_df.at[inputs_index, situation_column_head]
+        question = ground_truth_df.at[inputs_index, questions_column_head]
+        expected_article_refs = ground_truth_df.at[inputs_index, human_articles_column_head]
         
         # validate inputs
         if str(situation).lower() == 'nan': continue
@@ -98,14 +98,14 @@ def extract_articles(
         )
 
         # write results
-        articles_extraction_df.at[inputs_index, predicted_article_column_head] = "\n".join(predicted_article_refs)
-        articles_extraction_df.at[inputs_index, precision_column_head] = precision
-        articles_extraction_df.at[inputs_index, recall_column_head] = recall
+        ground_truth_df.at[inputs_index, predicted_article_column_head] = "\n".join(predicted_article_refs)
+        ground_truth_df.at[inputs_index, precision_column_head] = precision
+        ground_truth_df.at[inputs_index, recall_column_head] = recall
 
         # save results
         print("[*] Saving response...")
         save_output(
-            df = articles_extraction_df,
+            df = ground_truth_df,
             output_file_path = output_file_path
         )
         print("[+] Response saved")

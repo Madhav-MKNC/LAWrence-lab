@@ -22,7 +22,7 @@ def get_openai_response(
     language: str = "German",
     index = "#"
 ) -> str:
-    print(f"\n[input row {index}] INPUT:\n* SITUATION: {str(situation)[0:50]}...\n* QUESTION: {str(question)[0:50]}...")
+    print(f"\n[{index}] INPUT:\n* SITUATION: {str(situation)[0:50]}...\n* QUESTION: {str(question)[0:50]}...")
 
     messages = [
         {
@@ -63,6 +63,7 @@ def validate_articles(output: str) -> set:
     """
     articles = set()
     try:
+        # print(f"\033[93m* Articles retured from GPT: {output}\033[m")
         output = json.loads(output)
         output = list(output.values())[0]
         # print(f"\033[93m* Articles retured from GPT: {output}\033[m")

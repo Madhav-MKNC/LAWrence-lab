@@ -79,16 +79,15 @@ def get_performance(
             x = (extract_book_from_openai(ref), art)
             predicted_articles.add(x)
 
-    # printing for comparing visually
-    print(f"\033[30m*** Human     : {human_articles}\033[m")
-    print(f"\033[30m*** Generated : {predicted_articles}\033[m")
-        
     true_positives = set()
     for pbookname, particle in predicted_articles:
         for hbookname, harticle in human_articles:
             if pbookname == hbookname and is_subset_article(harticle, particle):
                 true_positives.add((hbookname, harticle))
-    
+
+    # printing for comparing visually
+    print(f"\033[30m*** Human     : {human_articles}\033[m")
+    print(f"\033[30m*** Generated : {predicted_articles}\033[m")
     print(f"\033[30m*** true_positives : {true_positives}\033[m")
     
     if not len(predicted_articles) or not len(human_articles):
