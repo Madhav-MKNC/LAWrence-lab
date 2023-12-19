@@ -5,8 +5,9 @@ import os
 import shutil
 import time
 import pandas as pd
-from utils import get_openai_response, validate_articles
-from compare import get_performance
+
+from utils.tools import get_openai_response, validate_articles
+from utils.compare import get_performance
 
 
 # create backup for Validation.xlsx

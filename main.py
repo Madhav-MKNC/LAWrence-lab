@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from extract_articles import create_backup, extract_articles
+from utils.extract_articles import create_backup, extract_articles
 import sys
 import pandas as pd
 
