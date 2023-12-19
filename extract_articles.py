@@ -4,43 +4,30 @@
 import os
 import shutil
 import time
-import sys
 import pandas as pd
 from utils import get_openai_response, validate_articles
 from compare import get_performance
 
 
-# command line arguments
-try:
-    start_row = int(sys.argv[1]) - 1
-    end_row = int(sys.argv[2]) - 1
-except:
-    print(f"\033[31mUSAGE: python {sys.argv[0]} START_ROW END_ROW\nExample: python {sys.argv[0]} 1 3\033[m")
-    sys.exit()
-
 # numerical column indexes
-col_mapping = {chr(65+i).upper(): i for i in range(1,27)}  
+col_mapping = {chr(65+i).upper(): i for i in range(1,27)}
 
-# xlsx files
-file_path = 'Validation.xlsx'
 
 # create backup for Validation.xlsx
-source_file_path = file_path
-if not os.path.exists("bak"): os.makedirs("bak")
-destination_file_path = f"bak/{time.time()}{source_file_path}"
-shutil.copyfile(source_file_path, destination_file_path)
-
-# Read Articles Extraction sheet
-print("[*] Reading Validation.xlsx")
-xls = pd.ExcelFile(file_path)
-overview_df = xls.parse("Overview")
-articles_extraction_df = xls.parse("Ground truth")
-
+def create_backup(file_path):
+    source_file_path = file_path
+    if not os.path.exists("bak"): os.makedirs("bak")
+    destination_file_path = f"bak/{time.time()}{source_file_path}"
+    shutil.copyfile(source_file_path, destination_file_path)
 
 
 # extact articles
-# for prompt_index, prompt_row in overview_df.iterrows():
-for prompt_index in range(start_row, end_row + 1):
+def extract_articles(
+    prompt_index,
+    overview_df,
+    articles_extraction_df,
+    file_path
+):
     prompt_row = overview_df.iloc[prompt_index]
     
     # read prompts
@@ -50,7 +37,7 @@ for prompt_index in range(start_row, end_row + 1):
     used_model = prompt_row["Used model"]
 
     # verify values
-    if str(prompt_num).lower() == 'nan' or str(prompt_name).lower() == 'nan' or str(full_prompt).lower() == 'nan' or str(used_model).lower() == 'nan': continue
+    if str(prompt_num).lower() == 'nan' or str(prompt_name).lower() == 'nan' or str(full_prompt).lower() == 'nan' or str(used_model).lower() == 'nan': return
     
     # validate values
     prompt_num = int(prompt_num)   
@@ -64,12 +51,7 @@ for prompt_index in range(start_row, end_row + 1):
     situation_column = col_mapping[prompt_row["Col. Situation"]]
     questions_column = col_mapping[prompt_row["Col. Question"]]
     human_articles_column = col_mapping[prompt_row["Col. Relevant Articles"]]
-    
-    # read output columns
-    predicted_article_column = col_mapping[prompt_row["Col. Generated articles"]]
-    precision_column = col_mapping[prompt_row["Col. Precision"]]
-    recall_column = col_mapping[prompt_row["Col. Recall"]]
-    
+
     # output column names
     predicted_article_column_head = f"{prompt_num}-Articles"
     precision_column_head = f"{prompt_num}-Precision"
@@ -83,11 +65,6 @@ for prompt_index in range(start_row, end_row + 1):
     
     # inputs to run tests on 
     for inputs_index, inputs_row in articles_extraction_df.iterrows():
-        # # read inputs
-        # situation = inputs_row[situation_column]
-        # question = inputs_row[questions_column]
-        # expected_article_refs = inputs_row[human_articles_column]
-        
         # read inputs
         situation = articles_extraction_df.iat[inputs_index, situation_column]
         question = articles_extraction_df.iat[inputs_index, questions_column]
@@ -112,11 +89,6 @@ for prompt_index in range(start_row, end_row + 1):
             human_articles_set = expected_article_refs,
             predicted_artilces_set = predicted_article_refs
         )
-        
-        # # write results
-        # articles_extraction_df.at[inputs_index, predicted_article_column] = "\n".join(predicted_article_refs)
-        # articles_extraction_df.at[inputs_index, precision_column] = precision
-        # articles_extraction_df.at[inputs_index, recall_column] = recall
 
         # write results
         articles_extraction_df.at[inputs_index, predicted_article_column_head] = "\n".join(predicted_article_refs)
