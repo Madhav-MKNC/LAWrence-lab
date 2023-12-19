@@ -5,14 +5,6 @@ Testing with _Archive/test_regex.py
 import re
 
 
-# def extract_with_openai(article_string: str):
-#     """
-#     Extracts {bookName: articleNum(minor)} with OpenAI API.
-#     NOTE: this utility is on hold currently 
-#     """
-#     prompt = "Your task is to extract lawbook name and article num from the following string" ... ya ... "following set"
-
-
 def extract_article(article_string: str) -> list:
     """
     Extracts the article number and minor.
@@ -23,28 +15,28 @@ def extract_article(article_string: str) -> list:
         return article_match
     else:
         print(f'\033[31m*** extract_article(): No article extracted from {article_string}\033[m')
-        return None
+        return []
 
 
-# def extract_book(article_string: str) -> str:
-#     """
-#     Extracts the name of the law book.
-#     Assumptions: The book name is expected to be at the start or end of the string only.
-#     Approach: If the string starts with 'art.', then the book name must be at the end; otherwise, the book name will be at the beginning.
-#     """
-#     article_string = article_string.lower()
-#     if article_string.startswith('art.'):
-#         return str(article_string.split(" ")[-1])
-#     return str(article_string.split(" ")[0])
+def extract_book(article_string: str) -> str:
+    """
+    Extracts the name of the law book.
+    Assumptions: The book name is expected to be at the start or end of the string only.
+    Approach: If the string starts with 'art.', then the book name must be at the end; otherwise, the book name will be at the beginning.
+    """
+    article_string = article_string.lower()
+    if article_string.startswith('art.'):
+        return str(article_string.split(" ")[-1])
+    return str(article_string.split(" ")[0])
     
     
 
-def extract_book(article_string: str):
-    """
-    Extracts the lawbook name.
-    """
-    book_name = re.sub(r'art\.\s*(\d+[a-z]*)|([a-z]+\.\s*\d+[a-z]*)', '', article_string.lower()).strip().lower()
-    return book_name
+# def extract_book(article_string: str):
+#     """
+#     Extracts the lawbook name.
+#     """
+#     book_name = re.sub(r'art\.\s*(\d+[a-z]*)|([a-z]+\.\s*\d+[a-z]*)', '', article_string.lower()).strip().lower()
+#     return book_name
 
 
 def is_subset_article(human_article, predicted_article):
@@ -95,6 +87,11 @@ def get_performance(
         for (hbookname, harticle) in human_articles
         if pbookname == hbookname and is_subset_article(harticle, particle)
     }
+    
+    if not len(predicted_articles) or not len(human_articles):
+        precision, recall = 0, 0
+        print("\033[32m[=]", precision, recall, "\033[m")
+        return precision, recall
 
     precision = len(true_positives) / len(predicted_articles)
     recall = len(true_positives) / len(human_articles)

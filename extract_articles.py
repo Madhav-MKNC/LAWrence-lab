@@ -9,10 +9,6 @@ from utils import get_openai_response, validate_articles
 from compare import get_performance
 
 
-# numerical column indexes
-col_mapping = {chr(65+i).upper(): i for i in range(1,27)}
-
-
 # create backup for Validation.xlsx
 def create_backup(file_path):
     source_file_path = file_path
@@ -37,7 +33,8 @@ def extract_articles(
     used_model = prompt_row["Used model"]
 
     # verify values
-    if str(prompt_num).lower() == 'nan' or str(prompt_name).lower() == 'nan' or str(full_prompt).lower() == 'nan' or str(used_model).lower() == 'nan': return
+    if str(prompt_num).lower() == 'nan' or str(prompt_name).lower() == 'nan' or str(full_prompt).lower() == 'nan' or str(used_model).lower() == 'nan':
+        return
     
     # validate values
     prompt_num = int(prompt_num)   
@@ -47,10 +44,10 @@ def extract_articles(
 
     print(f"\n[prompt:model {prompt_num}] Using: ({prompt_name}, {used_model})")
     
-    # read input columns
-    situation_column = col_mapping[prompt_row["Col. Situation"]]
-    questions_column = col_mapping[prompt_row["Col. Question"]]
-    human_articles_column = col_mapping[prompt_row["Col. Relevant Articles"]]
+    # input columns names
+    situation_column_head = "Situation"
+    questions_column_head = "Questions"
+    human_articles_column_head = "Relevant Articles"
 
     # output column names
     predicted_article_column_head = f"{prompt_num}-Articles"
@@ -66,16 +63,16 @@ def extract_articles(
     # inputs to run tests on 
     for inputs_index, inputs_row in articles_extraction_df.iterrows():
         # read inputs
-        situation = articles_extraction_df.iat[inputs_index, situation_column]
-        question = articles_extraction_df.iat[inputs_index, questions_column]
-        expected_article_refs = articles_extraction_df.iat[inputs_index, human_articles_column]
+        situation = articles_extraction_df.at[inputs_index, situation_column_head]
+        question = articles_extraction_df.at[inputs_index, questions_column_head]
+        expected_article_refs = articles_extraction_df.at[inputs_index, human_articles_column_head]
         
         # validate inputs
         if str(situation).lower() == 'nan': continue
         question = question.strip() if str(question).lower() != 'nan' else ""
         human_articles_set = set()
         if str(expected_article_refs).lower() != "nan":
-            for i in expected_article_refs.split("\n"):
+            for i in expected_article_refs.strip().split("\n"):
                 human_articles_set.add(i.strip())
 
         # predict articles with openai
@@ -89,7 +86,7 @@ def extract_articles(
         predicted_article_refs = validate_articles(response)
         
         precision, recall = get_performance(
-            human_articles_set = expected_article_refs,
+            human_articles_set = human_articles_set,
             predicted_artilces_set = predicted_article_refs
         )
 

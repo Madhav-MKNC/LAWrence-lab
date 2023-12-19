@@ -28,9 +28,9 @@ articles_extraction_df = xls.parse("Ground truth")
 
 
 # extracting articles and evualutating performance
-print("\n######################################################")
-print("## Extracting articles and evualutating performance ##")
-print("######################################################")
+print("\n####################################################")
+print("## Extracting articles and Evaluating performance ##")
+print("####################################################")
 for prompt_index in range(start_row, end_row + 1):
     extract_articles(
         prompt_index = prompt_index,
