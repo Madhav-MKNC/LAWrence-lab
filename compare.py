@@ -80,7 +80,7 @@ def get_performance(
     print(f"\033[30m*** Generated : {predicted_articles}\033[m")
     
     true_positives = {
-        (pbookname, particle)
+        (hbookname, harticle)
         for (pbookname, particle) in predicted_articles
         for (hbookname, harticle) in human_articles
         if pbookname == hbookname and is_subset_article(harticle, particle)
