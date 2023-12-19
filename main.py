@@ -92,6 +92,7 @@ for index in range(start_row, end_row + 1):
     print("[*] Saving Ouput")
     with pd.ExcelWriter(file_path, mode='a', engine='openpyxl', if_sheet_exists='replace') as writer:
         overview_df.to_excel(writer, sheet_name='Overview', index=False)
+        print(original_ground_truth)
         original_ground_truth.to_excel(writer, sheet_name='Ground truth', index=False)
     print("[+] Response saved")
 

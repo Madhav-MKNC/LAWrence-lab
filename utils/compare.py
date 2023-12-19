@@ -32,8 +32,10 @@ def extract_book_from_human(article_string: str) -> str:
 def extract_book_from_openai(article_string: str):
     """
     Extracts the lawbook name.
+    Assumption: bookname would be at the beginning
     """
-    book_name = re.sub(r'art\.\s*(\d+[a-z]*)|([a-z]+\.\s*\d+[a-z]*)', '', article_string.lower()).strip().lower()
+    # book_name = re.sub(r'art\.\s*(\d+[a-z]*)|([a-z]+\.\s*\d+[a-z]*)', '', article_string.lower()).strip().lower()
+    book_name = article_string.lower().strip().split(" ")[0]
     return book_name
 
 
@@ -41,8 +43,12 @@ def is_subset_article(human_article, predicted_article):
     """
     Checks if the predicted article is the same as or a subset of the human-labeled article.
     For example, '34' is a subset of '34a', and '34' matches '34'.
+    Approach:   If predicted_article is subset of human_article then after removing predicted_article string
+                from human_article string there is be only alpha (a,b,c..) or '' left.
     """
-    return predicted_article.startswith(human_article)
+    # return predicted_article.startswith(human_article)
+    x = human_article.replace(predicted_article, '')
+    return x.isalpha() or x == ""
 
 
 # get precision, recall
