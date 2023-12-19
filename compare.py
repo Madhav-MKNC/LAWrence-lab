@@ -62,20 +62,18 @@ def get_performance(
     # print(f"\033[36m*** Generated : {predicted_artilces_set}\033[m")
 
     # human articles 
-    human_articles = []
+    human_articles = set()
     for ref in human_articles_set:
         for art in extract_article(ref):
             x = (extract_book(ref), art)
-            if x not in human_articles:
-                human_articles.append(x)
+            human_articles.add(x)
     
     # predicted articles
-    predicted_articles = []
+    predicted_articles = set()
     for ref in predicted_artilces_set:
         for art in extract_article(ref):
             x = (extract_book(ref), art)
-            if x not in predicted_articles:
-                predicted_articles.append(x)
+            predicted_articles.add(x)
 
     # printing for comparing visually
     print(f"\033[30m*** Human     : {human_articles}\033[m")
