@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from utils.extract_articles import save_output, extract_articles
+from utils.extract_articles import create_backup, extract_articles
 import sys
 import pandas as pd
 
@@ -17,7 +17,8 @@ except:
 
 # xlsx files
 file_path = 'Validation.xlsx'
-output_file_path =  f"Outputs/row{start_row}_to_row{end_row}.xlsx"
+output_file_path =  f"Outputs/row{start_row+1}_to_row{end_row+1}.xlsx"
+create_backup(source_file_path=file_path)
 
 
 # Read overview sheet

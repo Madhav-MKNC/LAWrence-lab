@@ -18,7 +18,7 @@ def extract_article(article_string: str) -> list:
         return []
 
 
-def extract_book(article_string: str) -> str:
+def extract_book_from_human(article_string: str) -> str:
     """
     Extracts the name of the law book.
     Assumptions: The book name is expected to be at the start or end of the string only.
@@ -27,15 +27,14 @@ def extract_book(article_string: str) -> str:
     """
     article_string = article_string.lower()
     return str(article_string.split(" ")[-1])
-    
-    
 
-# def extract_book(article_string: str):
-#     """
-#     Extracts the lawbook name.
-#     """
-#     book_name = re.sub(r'art\.\s*(\d+[a-z]*)|([a-z]+\.\s*\d+[a-z]*)', '', article_string.lower()).strip().lower()
-#     return book_name
+
+def extract_book_from_openai(article_string: str):
+    """
+    Extracts the lawbook name.
+    """
+    book_name = re.sub(r'art\.\s*(\d+[a-z]*)|([a-z]+\.\s*\d+[a-z]*)', '', article_string.lower()).strip().lower()
+    return book_name
 
 
 def is_subset_article(human_article, predicted_article):
@@ -64,14 +63,14 @@ def get_performance(
     human_articles = set()
     for ref in human_articles_set:
         for art in extract_article(ref):
-            x = (extract_book(ref), art)
+            x = (extract_book_from_human(ref), art)
             human_articles.add(x)
     
     # predicted articles
     predicted_articles = set()
     for ref in predicted_artilces_set:
         for art in extract_article(ref):
-            x = (extract_book(ref), art)
+            x = (extract_book_from_openai(ref), art)
             predicted_articles.add(x)
 
     # printing for comparing visually

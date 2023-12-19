@@ -11,10 +11,9 @@ from utils.compare import get_performance
 
 
 # create backup for Validation.xlsx
-def create_backup(file_path):
-    source_file_path = file_path
-    if not os.path.exists("bak"): os.makedirs("bak")
-    destination_file_path = f"bak/{time.time()}{source_file_path}"
+def create_backup(source_file_path):
+    if not os.path.exists("_bak"): os.makedirs("_bak")
+    destination_file_path = f"_bak/{time.time()}{source_file_path}"
     shutil.copyfile(source_file_path, destination_file_path)
 
 
