@@ -16,13 +16,13 @@ except:
 
 
 # xlsx files
-file_path = 'Validation.xlsx'
+file_path = 'Ground Truth.xlsx'
 output_file_path =  f"Outputs/row{start_row+1}_to_row{end_row+1}.xlsx"
 create_backup(source_file_path=file_path)
 
 
 # Read overview sheet
-print("[*] Reading Validation.xlsx sheet")
+print("[*] Reading Ground Truth.xlsx file")
 xls = pd.ExcelFile(file_path)
 overview_df = xls.parse("Overview")
 articles_extraction_df = xls.parse("Ground truth")
@@ -57,7 +57,7 @@ for index in range(start_row, end_row + 1):
         print("\033[31m[!] [prompt:model] row empty.\033[m")
         continue
     
-    # fetching performance from Output_Comparison.xlsx
+    # fetching performance
     print(f"[*] [prompt:model] {prompt_num}")
     try:
         precision_column = articles_extraction_df[f"{prompt_num}-Precision"]

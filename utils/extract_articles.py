@@ -10,7 +10,7 @@ from utils.tools import get_openai_response, validate_articles
 from utils.compare import get_performance
 
 
-# create backup for Validation.xlsx
+# create backup for Ground Truth.xlsx
 def create_backup(source_file_path):
     if not os.path.exists("_bak"): os.makedirs("_bak")
     destination_file_path = f"_bak/{time.time()}{source_file_path}"
