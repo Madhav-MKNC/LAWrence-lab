@@ -32,25 +32,32 @@ def get_openai_response(
     ]
 
     try:
-        response = openai_client.chat.completions.create(
-            messages = messages,
-            model = model,
-            # response_format = {"type": "json_object"},
-            max_tokens = 3000,
-            temperature = 0,
-            top_p = 1,
-            frequency_penalty = 0,
-            presence_penalty = 0,
-            seed = 0,
-        )
-        output = response.choices[0].message.content
-        ...
-        ...
-        with open("all_outputs.txt", "a") as file:
-            file.write(f'Output [{model}]:\n{output}\n\n')
-        ...
-        ...
-        return output
+        if model.lower().strip() in ["gpt-4-1106-preview", "gpt-3.5-turbo-1106"]:
+            response = openai_client.chat.completions.create(
+                messages = messages,
+                model = model,
+                response_format = {"type": "json_object"},
+                temperature = 0,
+                top_p = 1,
+                frequency_penalty = 0,
+                presence_penalty = 0,
+                seed = 0,
+            )
+            output = response.choices[0].message.content
+            return output
+
+        else:
+            response = openai_client.chat.completions.create(
+                messages = messages,
+                model = model,
+                temperature = 0,
+                top_p = 1,
+                frequency_penalty = 0,
+                presence_penalty = 0,
+                seed = 0,
+            )
+            output = response.choices[0].message.content
+            return output
 
     except OpenAIError as e:
         print('\033[31m*** get_openai_response():', str(e), "\033[m")
