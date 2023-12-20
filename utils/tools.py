@@ -20,10 +20,10 @@ def get_openai_response(
     situation: str,
     question: str,
     language: str = "German",
-    index = "#"
 ) -> str:
-    print(f"\n[{index}] INPUT:\n* SITUATION: {str(situation)[0:50]}...\n* QUESTION: {str(question)[0:50]}...")
-
+    """
+    Retrieve articles using openai
+    """
     messages = [
         {
             'role': 'system',
@@ -35,7 +35,7 @@ def get_openai_response(
         response = openai_client.chat.completions.create(
             messages = messages,
             model = model,
-            response_format = {"type": "json_object"},
+            # response_format = {"type": "json_object"},
             max_tokens = 3000,
             temperature = 0,
             top_p = 1,
@@ -43,7 +43,14 @@ def get_openai_response(
             presence_penalty = 0,
             seed = 0,
         )
-        return response.choices[0].message.content
+        output = response.choices[0].message.content
+        ...
+        ...
+        with open("all_outputs.txt", "a") as file:
+            file.write(f'Output [{model}]:\n{output}\n\n')
+        ...
+        ...
+        return output
 
     except OpenAIError as e:
         print('\033[31m*** get_openai_response():', str(e), "\033[m")
@@ -63,10 +70,10 @@ def validate_articles(output: str) -> set:
     """
     articles = set()
     try:
-        # print(f"\033[93m* Articles retured from GPT: {output}\033[m")
+        # print(f"\033[93m* GPT: {output}\033[m")
         output = json.loads(output)
         output = list(output.values())[0]
-        # print(f"\033[93m* Articles retured from GPT: {output}\033[m")
+        print(f"\033[93m* Articles retured from GPT: {output}\033[m")
         for i in output:
             articles.add(i["article_ref"])
         print('[+] Validated articles returned from GPT.')

@@ -1,0 +1,4274 @@
+Output:
+```json
+{
+    "articles": [
+        {
+            "article_ref": "ZGB ART. 28 Abs. 1"
+        },
+        {
+            "article_ref": "ZGB ART. 28 Abs. 2"
+        },
+        {
+            "article_ref": "ZGB ART. 28a"
+        },
+        {
+            "article_ref": "ZGB ART. 19"
+        },
+        {
+            "article_ref": "OR ART. 328"
+        },
+        {
+            "article_ref": "OR ART. 41"
+        },
+        {
+            "article_ref": "OR ART. 62"
+        },
+        {
+            "article_ref": "OR ART. 67"
+        },
+        {
+            "article_ref": "OR ART. 68"
+        },
+        {
+            "article_ref": "UrhG ART. 11"
+        },
+        {
+            "article_ref": "UrhG ART. 13"
+        },
+        {
+            "article_ref": "UrhG ART. 15"
+        },
+        {
+            "article_ref": "UrhG ART. 19"
+        },
+        {
+            "article_ref": "UrhG ART. 20"
+        },
+        {
+            "article_ref": "UrhG ART. 28"
+        },
+        {
+            "article_ref": "UrhG ART. 29"
+        },
+        {
+            "article_ref": "UrhG ART. 30"
+        },
+        {
+            "article_ref": "UrhG ART. 36"
+        },
+        {
+            "article_ref": "UrhG ART. 80"
+        }
+    ]
+}
+```
+
+Output:
+```json
+{
+    "articles": [
+        {
+            "article_ref": "OR ART. 185 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 197 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 62 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 97 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 99 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 100 Abs. 1"
+        }
+    ]
+}
+```
+
+Output:
+```json
+{
+    "articles": [
+        {
+            "article_ref": "OR ART. 184 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 185 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 185 Abs. 2"
+        },
+        {
+            "article_ref": "OR ART. 213"
+        },
+        {
+            "article_ref": "OR ART. 216 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 237 Abs. 1"
+        }
+    ]
+}
+```
+
+Output:
+```json
+{
+    "articles": [
+        {
+            "article_ref": "BV ART. 38"
+        },
+        {
+            "article_ref": "BüG ART. 12"
+        }
+    ]
+}
+```
+
+Output:
+{
+    "articles": [
+        {
+            "article_ref": "CC ART. 28 Abs. 1"
+        },
+        {
+            "article_ref": "CC ART. 28 Abs. 2"
+        },
+        {
+            "article_ref": "CC ART. 28 Abs. 3"
+        },
+        {
+            "article_ref": "CC ART. 28a"
+        },
+        {
+            "article_ref": "CC ART. 28b"
+        },
+        {
+            "article_ref": "CC ART. 28c"
+        },
+        {
+            "article_ref": "CC ART. 28d"
+        },
+        {
+            "article_ref": "CC ART. 28e"
+        },
+        {
+            "article_ref": "CC ART. 28f"
+        },
+        {
+            "article_ref": "CC ART. 28g"
+        },
+        {
+            "article_ref": "CC ART. 28h"
+        },
+        {
+            "article_ref": "CC ART. 28i"
+        },
+        {
+            "article_ref": "CC ART. 28k"
+        },
+        {
+            "article_ref": "CC ART. 28l"
+        },
+        {
+            "article_ref": "CC ART. 28m"
+        },
+        {
+            "article_ref": "CC ART. 28n"
+        },
+        {
+            "article_ref": "CC ART. 28o"
+        },
+        {
+            "article_ref": "CC ART. 28p"
+        },
+        {
+            "article_ref": "CC ART. 28q"
+        },
+        {
+            "article_ref": "CC ART. 28r"
+        },
+        {
+            "article_ref": "CC ART. 28s"
+        },
+        {
+            "article_ref": "CC ART. 28t"
+        },
+        {
+            "article_ref": "CC ART. 28u"
+        },
+        {
+            "article_ref": "CC ART. 28v"
+        },
+        {
+            "article_ref": "CC ART. 28w"
+        },
+        {
+            "article_ref": "CC ART. 28x"
+        },
+        {
+            "article_ref": "CC ART. 28y"
+        },
+        {
+            "article_ref": "CC ART. 28z"
+        },
+        {
+            "article_ref": "CC ART. 28aa"
+        },
+        {
+            "article_ref": "CC ART. 28ab"
+        },
+        {
+            "article_ref": "CC ART. 28ac"
+        },
+        {
+            "article_ref": "CC ART. 28ad"
+        },
+        {
+            "article_ref": "CC ART. 28ae"
+        },
+        {
+            "article_ref": "CC ART. 28af"
+        },
+        {
+            "article_ref": "CC ART. 28ag"
+        },
+        {
+            "article_ref": "CC ART. 28ah"
+        },
+        {
+            "article_ref": "CC ART. 28ai"
+        },
+        {
+            "article_ref": "CC ART. 28aj"
+        },
+        {
+            "article_ref": "CC ART. 28ak"
+        },
+        {
+            "article_ref": "CC ART. 28al"
+        },
+        {
+            "article_ref": "CC ART. 28am"
+        },
+        {
+            "article_ref": "CC ART. 28an"
+        },
+        {
+            "article_ref": "CC ART. 28ao"
+        },
+        {
+            "article_ref": "CC ART. 28ap"
+        },
+        {
+            "article_ref": "CC ART. 28aq"
+        },
+        {
+            "article_ref": "CC ART. 28ar"
+        },
+        {
+            "article_ref": "CC ART. 28as"
+        },
+        {
+            "article_ref": "CC ART. 28at"
+        },
+        {
+            "article_ref": "CC ART. 28au"
+        },
+        {
+            "article_ref": "CC ART. 28av"
+        },
+        {
+            "article_ref": "CC ART. 28aw"
+        },
+        {
+            "article_ref": "CC ART. 28ax"
+        },
+        {
+            "article_ref": "CC ART. 28ay"
+        },
+        {
+            "article_ref": "CC ART. 28az"
+        },
+        {
+            "article_ref": "CC ART. 28ba"
+        },
+        {
+            "article_ref": "CC ART. 28bb"
+        },
+        {
+            "article_ref": "CC ART. 28bc"
+        },
+        {
+            "article_ref": "CC ART. 28bd"
+        },
+        {
+            "article_ref": "CC ART. 28be"
+        },
+        {
+            "article_ref": "CC ART. 28bf"
+        },
+        {
+            "article_ref": "CC ART. 28bg"
+        },
+        {
+            "article_ref": "CC ART. 28bh"
+        },
+        {
+            "article_ref": "CC ART. 28bi"
+        },
+        {
+            "article_ref": "CC ART. 28bj"
+        },
+        {
+            "article_ref": "CC ART. 28bk"
+        },
+        {
+            "article_ref": "CC ART. 28bl"
+        },
+        {
+            "article_ref": "CC ART. 28bm"
+        },
+        {
+            "article_ref": "CC ART. 28bn"
+        },
+        {
+            "article_ref": "CC ART. 28bo"
+        },
+        {
+            "article_ref": "CC ART. 28bp"
+        },
+        {
+            "article_ref": "CC ART. 28bq"
+        },
+        {
+            "article_ref": "CC ART. 28br"
+        },
+        {
+            "article_ref": "CC ART. 28bs"
+        },
+        {
+            "article_ref": "CC ART. 28bt"
+        },
+        {
+            "article_ref": "CC ART. 28bu"
+        },
+        {
+            "article_ref": "CC ART. 28bv"
+        },
+        {
+            "article_ref": "CC ART. 28bw"
+        },
+        {
+            "article_ref": "CC ART. 28bx"
+        },
+        {
+            "article_ref": "CC ART. 28by"
+        },
+        {
+            "article_ref": "CC ART. 28bz"
+        },
+        {
+            "article_ref": "CC ART. 28ca"
+        },
+        {
+            "article_ref": "CC ART. 28cb"
+        },
+        {
+            "article_ref": "CC ART. 28cc"
+        },
+        {
+            "article_ref": "CC ART. 28cd"
+        },
+        {
+            "article_ref": "CC ART. 28ce"
+        },
+        {
+            "article_ref": "CC ART. 28cf"
+        },
+        {
+            "article_ref": "CC ART. 28cg"
+        },
+        {
+            "article_ref": "CC ART. 28ch"
+        },
+        {
+            "article_ref": "CC ART. 28ci"
+        },
+        {
+            "article_ref": "CC ART. 28cj"
+        },
+        {
+            "article_ref": "CC ART. 28ck"
+        },
+        {
+            "article_ref": "CC ART. 28cl"
+        },
+        {
+            "article_ref": "CC ART. 28cm"
+        },
+        {
+            "article_ref": "CC ART. 28cn"
+        },
+        {
+            "article_ref": "CC ART. 28co"
+        },
+        {
+            "article_ref": "CC ART. 28cp"
+        },
+        {
+            "article_ref": "CC ART. 28cq"
+        },
+        {
+            "article_ref": "CC ART. 28cr"
+        },
+        {
+            "article_ref": "CC ART. 28cs"
+        },
+        {
+            "article_ref": "CC ART. 28ct"
+        },
+        {
+            "article_ref": "CC ART. 28cu"
+        },
+        {
+            "article_ref": "CC ART. 28cv"
+        },
+        {
+            "article_ref": "CC ART. 28cw"
+        },
+        {
+            "article_ref": "CC ART. 28cx"
+        },
+        {
+            "article_ref": "CC ART. 28cy"
+        },
+        {
+            "article_ref": "CC ART. 28cz"
+        },
+        {
+            "article_ref": "CC ART. 28da"
+        },
+        {
+            "article_ref": "CC ART. 28db"
+        },
+        {
+            "article_ref": "CC ART. 28dc"
+        },
+        {
+            "article_ref": "CC ART. 28dd"
+        },
+        {
+            "article_ref": "CC ART. 28de"
+        },
+        {
+            "article_ref": "CC ART. 28df"
+        },
+        {
+            "article_ref": "CC ART. 28dg"
+        },
+        {
+            "article_ref": "CC ART. 28dh"
+        },
+        {
+            "article_ref": "CC ART. 28di"
+        },
+        {
+            "article_ref": "CC ART. 28dj"
+        },
+        {
+            "article_ref": "CC ART. 28dk"
+        },
+        {
+            "article_ref": "CC ART. 28dl"
+        },
+        {
+            "article_ref": "CC ART. 28dm"
+        },
+        {
+            "article_ref": "CC ART. 28dn"
+        },
+        {
+            "article_ref": "CC ART. 28do"
+        },
+        {
+            "article_ref": "CC ART. 28dp"
+        },
+        {
+            "article_ref": "CC ART. 28dq"
+        },
+        {
+            "article_ref": "CC ART. 28dr"
+        },
+        {
+            "article_ref": "CC ART. 28ds"
+        },
+        {
+            "article_ref": "CC ART. 28dt"
+        },
+        {
+            "article_ref": "CC ART. 28du"
+        },
+        {
+            "article_ref": "CC ART. 28dv"
+        },
+        {
+            "article_ref": "CC ART. 28dw"
+        },
+        {
+            "article_ref": "CC ART. 28dx"
+        },
+        {
+            "article_ref": "CC ART. 28dy"
+        },
+        {
+            "article_ref": "CC ART. 28dz"
+        },
+        {
+            "article_ref": "CC ART. 28ea"
+        },
+        {
+            "article_ref": "CC ART. 28eb"
+        },
+        {
+            "article_ref": "CC ART. 28ec"
+        },
+        {
+            "article_ref": "CC ART. 28ed"
+        },
+        {
+            "article_ref": "CC ART. 28ee"
+        },
+        {
+            "article_ref": "CC ART. 28ef"
+        },
+        {
+            "article_ref": "CC ART. 28eg"
+        },
+        {
+            "article_ref": "CC ART. 28eh"
+        },
+        {
+            "article_ref": "CC ART. 28ei"
+        },
+        {
+            "article_ref": "CC ART. 28ej"
+        },
+        {
+            "article_ref": "CC ART. 28ek"
+        },
+        {
+            "article_ref": "CC ART. 28el"
+        },
+        {
+            "article_ref": "CC ART. 28em"
+        },
+        {
+            "article_ref": "CC ART. 28en"
+        },
+        {
+            "article_ref": "CC ART. 28eo"
+        },
+        {
+            "article_ref": "CC ART. 28ep"
+        },
+        {
+            "article_ref": "CC ART. 28eq"
+        },
+        {
+            "article_ref": "CC ART. 28er"
+        },
+        {
+            "article_ref": "CC ART. 28es"
+        },
+        {
+            "article_ref": "CC ART. 28et"
+        },
+        {
+            "article_ref": "CC ART. 28eu"
+        },
+        {
+            "article_ref": "CC ART. 28ev"
+        },
+        {
+            "article_ref": "CC ART. 28ew"
+        },
+        {
+            "article_ref": "CC ART. 28ex"
+        },
+        {
+            "article_ref": "CC ART. 28ey"
+        },
+        {
+            "article_ref": "CC ART. 28ez"
+        },
+        {
+            "article_ref": "CC ART. 28fa"
+        },
+        {
+            "article_ref": "CC ART. 28fb"
+        },
+        {
+            "article_ref": "CC ART. 28fc"
+        },
+        {
+            "article_ref": "CC ART. 28fd"
+        },
+        {
+            "article_ref": "CC ART. 28fe"
+        },
+        {
+            "article_ref": "CC ART. 28ff"
+        },
+        {
+            "article_ref": "CC ART. 28fg"
+        },
+        {
+            "article_ref": "CC ART. 28fh"
+        },
+        {
+            "article_ref": "CC ART. 28fi"
+        },
+        {
+            "article_ref": "CC ART. 28fj"
+        },
+        {
+            "article_ref": "CC ART. 28fk"
+        },
+        {
+            "article_ref": "CC ART. 28fl"
+        },
+        {
+            "article_ref": "CC ART. 28fm"
+        },
+        {
+            "article_ref": "CC ART. 28fn"
+        },
+        {
+            "article_ref": "CC ART. 28fo"
+        },
+        {
+            "article_ref": "CC ART. 28fp"
+        },
+        {
+            "article_ref": "CC ART. 28fq"
+        },
+        {
+            "article_ref": "
+
+Output:
+{
+    "articles": [
+        {
+            "article_ref": "OR ART. 184"
+        },
+        {
+            "article_ref": "OR ART. 187"
+        },
+        {
+            "article_ref": "OR ART. 208"
+        },
+        {
+            "article_ref": "OR ART. 394"
+        },
+        {
+            "article_ref": "OR ART. 400"
+        },
+        {
+            "article_ref": "OR ART. 404"
+        },
+        {
+            "article_ref": "OR ART. 405"
+        },
+        {
+            "article_ref": "OR ART. 412"
+        },
+        {
+            "article_ref": "OR ART. 423"
+        },
+        {
+            "article_ref": "OR ART. 424"
+        },
+        {
+            "article_ref": "OR ART. 425"
+        },
+        {
+            "article_ref": "OR ART. 426"
+        },
+        {
+            "article_ref": "OR ART. 427"
+        },
+        {
+            "article_ref": "OR ART. 428"
+        },
+        {
+            "article_ref": "OR ART. 429"
+        },
+        {
+            "article_ref": "OR ART. 430"
+        },
+        {
+            "article_ref": "OR ART. 431"
+        },
+        {
+            "article_ref": "OR ART. 432"
+        },
+        {
+            "article_ref": "OR ART. 433"
+        },
+        {
+            "article_ref": "OR ART. 434"
+        },
+        {
+            "article_ref": "OR ART. 435"
+        },
+        {
+            "article_ref": "OR ART. 436"
+        },
+        {
+            "article_ref": "OR ART. 437"
+        },
+        {
+            "article_ref": "OR ART. 438"
+        },
+        {
+            "article_ref": "OR ART. 439"
+        },
+        {
+            "article_ref": "OR ART. 440"
+        },
+        {
+            "article_ref": "OR ART. 441"
+        },
+        {
+            "article_ref": "OR ART. 442"
+        },
+        {
+            "article_ref": "OR ART. 443"
+        },
+        {
+            "article_ref": "OR ART. 444"
+        },
+        {
+            "article_ref": "OR ART. 445"
+        },
+        {
+            "article_ref": "OR ART. 446"
+        },
+        {
+            "article_ref": "OR ART. 447"
+        },
+        {
+            "article_ref": "OR ART. 448"
+        },
+        {
+            "article_ref": "OR ART. 449"
+        },
+        {
+            "article_ref": "OR ART. 450"
+        },
+        {
+            "article_ref": "OR ART. 451"
+        },
+        {
+            "article_ref": "OR ART. 452"
+        },
+        {
+            "article_ref": "OR ART. 453"
+        },
+        {
+            "article_ref": "OR ART. 454"
+        },
+        {
+            "article_ref": "OR ART. 455"
+        },
+        {
+            "article_ref": "OR ART. 456"
+        },
+        {
+            "article_ref": "OR ART. 457"
+        },
+        {
+            "article_ref": "OR ART. 458"
+        },
+        {
+            "article_ref": "OR ART. 459"
+        },
+        {
+            "article_ref": "OR ART. 460"
+        },
+        {
+            "article_ref": "OR ART. 461"
+        },
+        {
+            "article_ref": "OR ART. 462"
+        },
+        {
+            "article_ref": "OR ART. 463"
+        },
+        {
+            "article_ref": "OR ART. 464"
+        },
+        {
+            "article_ref": "OR ART. 465"
+        },
+        {
+            "article_ref": "OR ART. 466"
+        },
+        {
+            "article_ref": "OR ART. 467"
+        },
+        {
+            "article_ref": "OR ART. 468"
+        },
+        {
+            "article_ref": "OR ART. 469"
+        },
+        {
+            "article_ref": "OR ART. 470"
+        },
+        {
+            "article_ref": "OR ART. 471"
+        },
+        {
+            "article_ref": "OR ART. 472"
+        },
+        {
+            "article_ref": "OR ART. 473"
+        },
+        {
+            "article_ref": "OR ART. 474"
+        },
+        {
+            "article_ref": "OR ART. 475"
+        },
+        {
+            "article_ref": "OR ART. 476"
+        },
+        {
+            "article_ref": "OR ART. 477"
+        },
+        {
+            "article_ref": "OR ART. 478"
+        },
+        {
+            "article_ref": "OR ART. 479"
+        },
+        {
+            "article_ref": "OR ART. 480"
+        },
+        {
+            "article_ref": "OR ART. 481"
+        },
+        {
+            "article_ref": "OR ART. 482"
+        },
+        {
+            "article_ref": "OR ART. 483"
+        },
+        {
+            "article_ref": "OR ART. 484"
+        },
+        {
+            "article_ref": "OR ART. 485"
+        },
+        {
+            "article_ref": "OR ART. 486"
+        },
+        {
+            "article_ref": "OR ART. 487"
+        },
+        {
+            "article_ref": "OR ART. 488"
+        },
+        {
+            "article_ref": "OR ART. 489"
+        },
+        {
+            "article_ref": "OR ART. 490"
+        },
+        {
+            "article_ref": "OR ART. 491"
+        },
+        {
+            "article_ref": "OR ART. 492"
+        },
+        {
+            "article_ref": "OR ART. 493"
+        },
+        {
+            "article_ref": "OR ART. 494"
+        },
+        {
+            "article_ref": "OR ART. 495"
+        },
+        {
+            "article_ref": "OR ART. 496"
+        },
+        {
+            "article_ref": "OR ART. 497"
+        },
+        {
+            "article_ref": "OR ART. 498"
+        },
+        {
+            "article_ref": "OR ART. 499"
+        },
+        {
+            "article_ref": "OR ART. 500"
+        },
+        {
+            "article_ref": "OR ART. 501"
+        },
+        {
+            "article_ref": "OR ART. 502"
+        },
+        {
+            "article_ref": "OR ART. 503"
+        },
+        {
+            "article_ref": "OR ART. 504"
+        },
+        {
+            "article_ref": "OR ART. 505"
+        },
+        {
+            "article_ref": "OR ART. 506"
+        },
+        {
+            "article_ref": "OR ART. 507"
+        },
+        {
+            "article_ref": "OR ART. 508"
+        },
+        {
+            "article_ref": "OR ART. 509"
+        },
+        {
+            "article_ref": "OR ART. 510"
+        },
+        {
+            "article_ref": "OR ART. 511"
+        },
+        {
+            "article_ref": "OR ART. 512"
+        },
+        {
+            "article_ref": "OR ART. 513"
+        },
+        {
+            "article_ref": "OR ART. 514"
+        },
+        {
+            "article_ref": "OR ART. 515"
+        },
+        {
+            "article_ref": "OR ART. 516"
+        },
+        {
+            "article_ref": "OR ART. 517"
+        },
+        {
+            "article_ref": "OR ART. 518"
+        },
+        {
+            "article_ref": "OR ART. 519"
+        },
+        {
+            "article_ref": "OR ART. 520"
+        },
+        {
+            "article_ref": "OR ART. 521"
+        },
+        {
+            "article_ref": "OR ART. 522"
+        },
+        {
+            "article_ref": "OR ART. 523"
+        },
+        {
+            "article_ref": "OR ART. 524"
+        },
+        {
+            "article_ref": "OR ART. 525"
+        },
+        {
+            "article_ref": "OR ART. 526"
+        },
+        {
+            "article_ref": "OR ART. 527"
+        },
+        {
+            "article_ref": "OR ART. 528"
+        },
+        {
+            "article_ref": "OR ART. 529"
+        },
+        {
+            "article_ref": "OR ART. 530"
+        },
+        {
+            "article_ref": "OR ART. 531"
+        },
+        {
+            "article_ref": "OR ART. 532"
+        },
+        {
+            "article_ref": "OR ART. 533"
+        },
+        {
+            "article_ref": "OR ART. 534"
+        },
+        {
+            "article_ref": "OR ART. 535"
+        },
+        {
+            "article_ref": "OR ART. 536"
+        },
+        {
+            "article_ref": "OR ART. 537"
+        },
+        {
+            "article_ref": "OR ART. 538"
+        },
+        {
+            "article_ref": "OR ART. 539"
+        },
+        {
+            "article_ref": "OR ART. 540"
+        },
+        {
+            "article_ref": "OR ART. 541"
+        },
+        {
+            "article_ref": "OR ART. 542"
+        },
+        {
+            "article_ref": "OR ART. 543"
+        },
+        {
+            "article_ref": "OR ART. 544"
+        },
+        {
+            "article_ref": "OR ART. 545"
+        },
+        {
+            "article_ref": "OR ART. 546"
+        },
+        {
+            "article_ref": "OR ART. 547"
+        },
+        {
+            "article_ref": "OR ART. 548"
+        },
+        {
+            "article_ref": "OR ART. 549"
+        },
+        {
+            "article_ref": "OR ART. 550"
+        },
+        {
+            "article_ref": "OR ART. 551"
+        },
+        {
+            "article_ref": "OR ART. 552"
+        },
+        {
+            "article_ref": "OR ART. 553"
+        },
+        {
+            "article_ref": "OR ART. 554"
+        },
+        {
+            "article_ref": "OR ART. 555"
+        },
+        {
+            "article_ref": "OR ART. 556"
+        },
+        {
+            "article_ref": "OR ART. 557"
+        },
+        {
+            "article_ref": "OR ART. 558"
+        },
+        {
+            "article_ref": "OR ART. 559"
+        },
+        {
+            "article_ref": "OR ART. 560"
+        },
+        {
+            "article_ref": "OR ART. 561"
+        },
+        {
+            "article_ref": "OR ART. 562"
+        },
+        {
+            "article_ref": "OR ART. 563"
+        },
+        {
+            "article_ref": "OR ART. 564"
+        },
+        {
+            "article_ref": "OR ART. 565"
+        },
+        {
+            "article_ref": "OR ART. 566"
+        },
+        {
+            "article_ref": "OR ART. 567"
+        },
+        {
+            "article_ref": "OR ART. 568"
+        },
+        {
+            "article_ref": "OR ART. 569"
+        },
+        {
+            "article_ref": "OR ART. 570"
+        },
+        {
+            "article_ref": "OR ART. 571"
+        },
+        {
+            "article_ref": "OR ART. 572"
+        },
+        {
+            "article_ref": "OR ART. 573"
+        },
+        {
+            "article_ref": "OR ART. 574"
+        },
+        {
+            "article_ref": "OR ART. 575"
+        },
+        {
+            "article_ref": "OR ART. 576"
+        },
+        {
+            "article_ref": "OR ART. 577"
+        },
+        {
+            "article_ref": "OR ART. 578"
+        },
+        {
+            "article_ref": "OR ART. 579"
+        },
+        {
+            "article_ref": "OR ART. 580"
+        },
+        {
+            "article_ref": "OR ART. 581"
+        },
+        {
+            "article_ref": "OR ART. 582"
+        },
+        {
+            "article_ref": "OR ART. 583"
+        },
+        {
+            "article_ref": "OR ART. 584"
+        },
+        {
+            "article_ref": "OR ART. 585"
+        },
+        {
+            "article_ref": "OR ART. 586"
+        },
+        {
+            "article_ref": "OR ART. 587"
+        },
+        {
+            "article_ref": "OR ART. 588"
+        },
+        {
+            "article_ref": "OR ART. 589"
+        },
+        {
+            "article_ref": "OR ART. 590"
+        },
+        {
+            "article_ref": "OR ART. 591"
+        },
+        {
+            "article_ref": "OR ART. 592"
+        },
+        {
+            "article_ref": "OR ART. 593"
+        },
+        {
+            "article_ref": "OR ART. 594"
+        },
+        {
+            "article_ref": "OR ART. 595"
+        },
+        {
+            "article_ref": "OR ART. 596"
+        },
+        {
+            "article_ref": "OR ART. 597"
+        },
+        {
+            "article_ref": "OR ART. 598"
+        },
+        {
+            "article_ref": "OR ART. 599"
+        },
+        {
+            "article_ref": "OR ART. 600"
+        },
+        {
+            "article_ref": "OR ART. 601"
+        },
+        {
+
+
+Output:
+{
+    "articles": [
+        {
+            "article_ref": "OR ART. 184"
+        },
+        {
+            "article_ref": "OR ART. 185"
+        },
+        {
+            "article_ref": "OR ART. 187"
+        },
+        {
+            "article_ref": "OR ART. 188"
+        },
+        {
+            "article_ref": "OR ART. 189"
+        },
+        {
+            "article_ref": "OR ART. 191"
+        },
+        {
+            "article_ref": "OR ART. 192"
+        },
+        {
+            "article_ref": "OR ART. 194"
+        },
+        {
+            "article_ref": "OR ART. 195"
+        },
+        {
+            "article_ref": "OR ART. 196"
+        },
+        {
+            "article_ref": "OR ART. 197"
+        },
+        {
+            "article_ref": "OR ART. 198"
+        },
+        {
+            "article_ref": "OR ART. 199"
+        },
+        {
+            "article_ref": "OR ART. 200"
+        },
+        {
+            "article_ref": "OR ART. 201"
+        },
+        {
+            "article_ref": "OR ART. 202"
+        },
+        {
+            "article_ref": "OR ART. 203"
+        },
+        {
+            "article_ref": "OR ART. 205"
+        },
+        {
+            "article_ref": "OR ART. 208"
+        },
+        {
+            "article_ref": "OR ART. 209"
+        },
+        {
+            "article_ref": "OR ART. 210"
+        },
+        {
+            "article_ref": "OR ART. 211"
+        },
+        {
+            "article_ref": "OR ART. 212"
+        },
+        {
+            "article_ref": "OR ART. 213"
+        },
+        {
+            "article_ref": "OR ART. 216"
+        },
+        {
+            "article_ref": "OR ART. 217"
+        },
+        {
+            "article_ref": "OR ART. 218"
+        },
+        {
+            "article_ref": "OR ART. 219"
+        },
+        {
+            "article_ref": "OR ART. 220"
+        },
+        {
+            "article_ref": "OR ART. 221"
+        },
+        {
+            "article_ref": "OR ART. 222"
+        },
+        {
+            "article_ref": "OR ART. 223"
+        },
+        {
+            "article_ref": "OR ART. 224"
+        },
+        {
+            "article_ref": "OR ART. 225"
+        },
+        {
+            "article_ref": "OR ART. 226"
+        },
+        {
+            "article_ref": "OR ART. 227"
+        },
+        {
+            "article_ref": "OR ART. 228"
+        },
+        {
+            "article_ref": "OR ART. 229"
+        },
+        {
+            "article_ref": "OR ART. 230"
+        },
+        {
+            "article_ref": "OR ART. 231"
+        },
+        {
+            "article_ref": "OR ART. 232"
+        },
+        {
+            "article_ref": "OR ART. 233"
+        },
+        {
+            "article_ref": "OR ART. 234"
+        },
+        {
+            "article_ref": "OR ART. 235"
+        },
+        {
+            "article_ref": "OR ART. 236"
+        },
+        {
+            "article_ref": "OR ART. 237"
+        },
+        {
+            "article_ref": "OR ART. 238"
+        },
+        {
+            "article_ref": "OR ART. 239"
+        },
+        {
+            "article_ref": "OR ART. 240"
+        },
+        {
+            "article_ref": "OR ART. 241"
+        },
+        {
+            "article_ref": "OR ART. 242"
+        },
+        {
+            "article_ref": "OR ART. 243"
+        },
+        {
+            "article_ref": "OR ART. 244"
+        },
+        {
+            "article_ref": "OR ART. 245"
+        },
+        {
+            "article_ref": "OR ART. 246"
+        },
+        {
+            "article_ref": "OR ART. 247"
+        },
+        {
+            "article_ref": "OR ART. 248"
+        },
+        {
+            "article_ref": "OR ART. 249"
+        },
+        {
+            "article_ref": "OR ART. 250"
+        },
+        {
+            "article_ref": "OR ART. 251"
+        },
+        {
+            "article_ref": "OR ART. 252"
+        },
+        {
+            "article_ref": "OR ART. 253"
+        },
+        {
+            "article_ref": "OR ART. 254"
+        },
+        {
+            "article_ref": "OR ART. 255"
+        },
+        {
+            "article_ref": "OR ART. 256"
+        },
+        {
+            "article_ref": "OR ART. 257"
+        },
+        {
+            "article_ref": "OR ART. 258"
+        },
+        {
+            "article_ref": "OR ART. 259"
+        },
+        {
+            "article_ref": "OR ART. 260"
+        },
+        {
+            "article_ref": "OR ART. 261"
+        },
+        {
+            "article_ref": "OR ART. 262"
+        },
+        {
+            "article_ref": "OR ART. 263"
+        },
+        {
+            "article_ref": "OR ART. 264"
+        },
+        {
+            "article_ref": "OR ART. 265"
+        },
+        {
+            "article_ref": "OR ART. 266"
+        },
+        {
+            "article_ref": "OR ART. 267"
+        },
+        {
+            "article_ref": "OR ART. 268"
+        },
+        {
+            "article_ref": "OR ART. 269"
+        },
+        {
+            "article_ref": "OR ART. 270"
+        },
+        {
+            "article_ref": "OR ART. 271"
+        },
+        {
+            "article_ref": "OR ART. 272"
+        },
+        {
+            "article_ref": "OR ART. 273"
+        },
+        {
+            "article_ref": "OR ART. 274"
+        },
+        {
+            "article_ref": "OR ART. 275"
+        },
+        {
+            "article_ref": "OR ART. 276"
+        },
+        {
+            "article_ref": "OR ART. 277"
+        },
+        {
+            "article_ref": "OR ART. 278"
+        },
+        {
+            "article_ref": "OR ART. 279"
+        },
+        {
+            "article_ref": "OR ART. 280"
+        },
+        {
+            "article_ref": "OR ART. 281"
+        },
+        {
+            "article_ref": "OR ART. 282"
+        },
+        {
+            "article_ref": "OR ART. 283"
+        },
+        {
+            "article_ref": "OR ART. 284"
+        },
+        {
+            "article_ref": "OR ART. 285"
+        },
+        {
+            "article_ref": "OR ART. 286"
+        },
+        {
+            "article_ref": "OR ART. 287"
+        },
+        {
+            "article_ref": "OR ART. 288"
+        },
+        {
+            "article_ref": "OR ART. 289"
+        },
+        {
+            "article_ref": "OR ART. 290"
+        },
+        {
+            "article_ref": "OR ART. 291"
+        },
+        {
+            "article_ref": "OR ART. 292"
+        },
+        {
+            "article_ref": "OR ART. 293"
+        },
+        {
+            "article_ref": "OR ART. 294"
+        },
+        {
+            "article_ref": "OR ART. 295"
+        },
+        {
+            "article_ref": "OR ART. 296"
+        },
+        {
+            "article_ref": "OR ART. 297"
+        },
+        {
+            "article_ref": "OR ART. 298"
+        },
+        {
+            "article_ref": "OR ART. 299"
+        },
+        {
+            "article_ref": "OR ART. 300"
+        },
+        {
+            "article_ref": "OR ART. 301"
+        },
+        {
+            "article_ref": "OR ART. 302"
+        },
+        {
+            "article_ref": "OR ART. 303"
+        },
+        {
+            "article_ref": "OR ART. 304"
+        },
+        {
+            "article_ref": "OR ART. 305"
+        },
+        {
+            "article_ref": "OR ART. 306"
+        },
+        {
+            "article_ref": "OR ART. 307"
+        },
+        {
+            "article_ref": "OR ART. 308"
+        },
+        {
+            "article_ref": "OR ART. 309"
+        },
+        {
+            "article_ref": "OR ART. 310"
+        },
+        {
+            "article_ref": "OR ART. 311"
+        },
+        {
+            "article_ref": "OR ART. 312"
+        },
+        {
+            "article_ref": "OR ART. 313"
+        },
+        {
+            "article_ref": "OR ART. 314"
+        },
+        {
+            "article_ref": "OR ART. 315"
+        },
+        {
+            "article_ref": "OR ART. 316"
+        },
+        {
+            "article_ref": "OR ART. 317"
+        },
+        {
+            "article_ref": "OR ART. 318"
+        },
+        {
+            "article_ref": "OR ART. 319"
+        },
+        {
+            "article_ref": "OR ART. 320"
+        },
+        {
+            "article_ref": "OR ART. 321"
+        },
+        {
+            "article_ref": "OR ART. 322"
+        },
+        {
+            "article_ref": "OR ART. 323"
+        },
+        {
+            "article_ref": "OR ART. 324"
+        },
+        {
+            "article_ref": "OR ART. 325"
+        },
+        {
+            "article_ref": "OR ART. 326"
+        },
+        {
+            "article_ref": "OR ART. 327"
+        },
+        {
+            "article_ref": "OR ART. 328"
+        },
+        {
+            "article_ref": "OR ART. 329"
+        },
+        {
+            "article_ref": "OR ART. 330"
+        },
+        {
+            "article_ref": "OR ART. 331"
+        },
+        {
+            "article_ref": "OR ART. 332"
+        },
+        {
+            "article_ref": "OR ART. 333"
+        },
+        {
+            "article_ref": "OR ART. 334"
+        },
+        {
+            "article_ref": "OR ART. 335"
+        },
+        {
+            "article_ref": "OR ART. 336"
+        },
+        {
+            "article_ref": "OR ART. 337"
+        },
+        {
+            "article_ref": "OR ART. 338"
+        },
+        {
+            "article_ref": "OR ART. 339"
+        },
+        {
+            "article_ref": "OR ART. 340"
+        },
+        {
+            "article_ref": "OR ART. 341"
+        },
+        {
+            "article_ref": "OR ART. 342"
+        },
+        {
+            "article_ref": "OR ART. 343"
+        },
+        {
+            "article_ref": "OR ART. 344"
+        },
+        {
+            "article_ref": "OR ART. 345"
+        },
+        {
+            "article_ref": "OR ART. 346"
+        },
+        {
+            "article_ref": "OR ART. 347"
+        },
+        {
+            "article_ref": "OR ART. 348"
+        },
+        {
+            "article_ref": "OR ART. 349"
+        },
+        {
+            "article_ref": "OR ART. 350"
+        },
+        {
+            "article_ref": "OR ART. 351"
+        },
+        {
+            "article_ref": "OR ART. 352"
+        },
+        {
+            "article_ref": "OR ART. 353"
+        },
+        {
+            "article_ref": "OR ART. 354"
+        },
+        {
+            "article_ref": "OR ART. 355"
+        },
+        {
+            "article_ref": "OR ART. 356"
+        },
+        {
+            "article_ref": "OR ART. 357"
+        },
+        {
+            "article_ref": "OR ART. 358"
+        },
+        {
+            "article_ref": "OR ART. 359"
+        },
+        {
+            "article_ref": "OR ART. 360"
+        },
+        {
+            "article_ref": "OR ART. 361"
+        },
+        {
+            "article_ref": "OR ART. 362"
+        },
+        {
+            "article_ref": "OR ART. 363"
+        },
+        {
+            "article_ref": "OR ART. 364"
+        },
+        {
+            "article_ref": "OR ART. 365"
+        },
+        {
+            "article_ref": "OR ART. 366"
+        },
+        {
+            "article_ref": "OR ART. 367"
+        },
+        {
+            "article_ref": "OR ART. 368"
+        },
+        {
+            "article_ref": "OR ART. 369"
+        },
+        {
+            "article_ref": "OR ART. 370"
+        },
+        {
+            "article_ref": "OR ART. 371"
+        },
+        {
+            "article_ref": "OR ART. 372"
+        },
+        {
+            "article_ref": "OR ART. 373"
+        },
+        {
+            "article_ref": "OR ART. 374"
+        },
+        {
+            "article_ref": "OR ART. 375"
+        },
+        {
+            "article_ref": "OR ART. 376"
+        },
+        {
+            "article_ref": "OR ART. 377"
+        },
+        {
+            "article_ref": "OR ART. 378"
+        },
+        {
+
+
+Output:
+```json
+{
+    "articles": [
+        {
+            "article_ref": "ZGB ART. 28 Abs. 1"
+        },
+        {
+            "article_ref": "ZGB ART. 28 Abs. 2"
+        },
+        {
+            "article_ref": "ZGB ART. 28a"
+        },
+        {
+            "article_ref": "ZGB ART. 328b"
+        },
+        {
+            "article_ref": "OR ART. 19 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 41 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 62 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 67 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 97 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 423 Abs. 1"
+        },
+        {
+            "article_ref": "UrhG ART. 11 Abs. 2"
+        },
+        {
+            "article_ref": "UrhG ART. 13"
+        },
+        {
+            "article_ref": "UrhG ART. 15"
+        },
+        {
+            "article_ref": "UrhG ART. 19 Abs. 1"
+        },
+        {
+            "article_ref": "UrhG ART. 28"
+        },
+        {
+            "article_ref": "UrhG ART. 29"
+        },
+        {
+            "article_ref": "UrhG ART. 36"
+        },
+        {
+            "article_ref": "UrhG ART. 80"
+        }
+    ]
+}
+```
+
+Output:
+```json
+{
+    "articles": [
+        {
+            "article_ref": "OR ART. 97 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 185 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 185 Abs. 2"
+        },
+        {
+            "article_ref": "OR ART. 197 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 221"
+        }
+    ]
+}
+```
+
+Output:
+```json
+{
+    "articles": [
+        {
+            "article_ref": "OR ART. 184 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 185 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 185 Abs. 2"
+        },
+        {
+            "article_ref": "OR ART. 197 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 213"
+        },
+        {
+            "article_ref": "OR ART. 216 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 216 Abs. 3"
+        }
+    ]
+}
+```
+
+Output:
+```json
+{
+    "articles": [
+        {
+            "article_ref": "BV ART. 38"
+        },
+        {
+            "article_ref": "BüG ART. 12"
+        }
+    ]
+}
+```
+
+Output:
+{
+    "articles": [
+        {
+            "article_ref": "CC ART. 28"
+        },
+        {
+            "article_ref": "CC ART. 28a"
+        },
+        {
+            "article_ref": "CC ART. 28b"
+        },
+        {
+            "article_ref": "CC ART. 28c"
+        },
+        {
+            "article_ref": "CC ART. 28d"
+        },
+        {
+            "article_ref": "CC ART. 28e"
+        },
+        {
+            "article_ref": "CC ART. 28f"
+        },
+        {
+            "article_ref": "CC ART. 28g"
+        },
+        {
+            "article_ref": "CC ART. 28h"
+        },
+        {
+            "article_ref": "CC ART. 28i"
+        },
+        {
+            "article_ref": "CC ART. 28k"
+        },
+        {
+            "article_ref": "CC ART. 28l"
+        },
+        {
+            "article_ref": "CC ART. 28m"
+        },
+        {
+            "article_ref": "CC ART. 28n"
+        },
+        {
+            "article_ref": "CC ART. 28o"
+        },
+        {
+            "article_ref": "CC ART. 28p"
+        },
+        {
+            "article_ref": "CC ART. 28q"
+        },
+        {
+            "article_ref": "CC ART. 28r"
+        },
+        {
+            "article_ref": "CC ART. 28s"
+        },
+        {
+            "article_ref": "CC ART. 28t"
+        },
+        {
+            "article_ref": "CC ART. 28u"
+        },
+        {
+            "article_ref": "CC ART. 28v"
+        },
+        {
+            "article_ref": "CC ART. 28w"
+        },
+        {
+            "article_ref": "CC ART. 28x"
+        },
+        {
+            "article_ref": "CC ART. 28y"
+        },
+        {
+            "article_ref": "CC ART. 28z"
+        },
+        {
+            "article_ref": "CC ART. 28aa"
+        },
+        {
+            "article_ref": "CC ART. 28ab"
+        },
+        {
+            "article_ref": "CC ART. 28ac"
+        },
+        {
+            "article_ref": "CC ART. 28ad"
+        },
+        {
+            "article_ref": "CC ART. 28ae"
+        },
+        {
+            "article_ref": "CC ART. 28af"
+        },
+        {
+            "article_ref": "CC ART. 28ag"
+        },
+        {
+            "article_ref": "CC ART. 28ah"
+        },
+        {
+            "article_ref": "CC ART. 28ai"
+        },
+        {
+            "article_ref": "CC ART. 28aj"
+        },
+        {
+            "article_ref": "CC ART. 28ak"
+        },
+        {
+            "article_ref": "CC ART. 28al"
+        },
+        {
+            "article_ref": "CC ART. 28am"
+        },
+        {
+            "article_ref": "CC ART. 28an"
+        },
+        {
+            "article_ref": "CC ART. 28ao"
+        },
+        {
+            "article_ref": "CC ART. 28ap"
+        },
+        {
+            "article_ref": "CC ART. 28aq"
+        },
+        {
+            "article_ref": "CC ART. 28ar"
+        },
+        {
+            "article_ref": "CC ART. 28as"
+        },
+        {
+            "article_ref": "CC ART. 28at"
+        },
+        {
+            "article_ref": "CC ART. 28au"
+        },
+        {
+            "article_ref": "CC ART. 28av"
+        },
+        {
+            "article_ref": "CC ART. 28aw"
+        },
+        {
+            "article_ref": "CC ART. 28ax"
+        },
+        {
+            "article_ref": "CC ART. 28ay"
+        },
+        {
+            "article_ref": "CC ART. 28az"
+        },
+        {
+            "article_ref": "CC ART. 28ba"
+        },
+        {
+            "article_ref": "CC ART. 28bb"
+        },
+        {
+            "article_ref": "CC ART. 28bc"
+        },
+        {
+            "article_ref": "CC ART. 28bd"
+        },
+        {
+            "article_ref": "CC ART. 28be"
+        },
+        {
+            "article_ref": "CC ART. 28bf"
+        },
+        {
+            "article_ref": "CC ART. 28bg"
+        },
+        {
+            "article_ref": "CC ART. 28bh"
+        },
+        {
+            "article_ref": "CC ART. 28bi"
+        },
+        {
+            "article_ref": "CC ART. 28bj"
+        },
+        {
+            "article_ref": "CC ART. 28bk"
+        },
+        {
+            "article_ref": "CC ART. 28bl"
+        },
+        {
+            "article_ref": "CC ART. 28bm"
+        },
+        {
+            "article_ref": "CC ART. 28bn"
+        },
+        {
+            "article_ref": "CC ART. 28bo"
+        },
+        {
+            "article_ref": "CC ART. 28bp"
+        },
+        {
+            "article_ref": "CC ART. 28bq"
+        },
+        {
+            "article_ref": "CC ART. 28br"
+        },
+        {
+            "article_ref": "CC ART. 28bs"
+        },
+        {
+            "article_ref": "CC ART. 28bt"
+        },
+        {
+            "article_ref": "CC ART. 28bu"
+        },
+        {
+            "article_ref": "CC ART. 28bv"
+        },
+        {
+            "article_ref": "CC ART. 28bw"
+        },
+        {
+            "article_ref": "CC ART. 28bx"
+        },
+        {
+            "article_ref": "CC ART. 28by"
+        },
+        {
+            "article_ref": "CC ART. 28bz"
+        },
+        {
+            "article_ref": "CC ART. 28ca"
+        },
+        {
+            "article_ref": "CC ART. 28cb"
+        },
+        {
+            "article_ref": "CC ART. 28cc"
+        },
+        {
+            "article_ref": "CC ART. 28cd"
+        },
+        {
+            "article_ref": "CC ART. 28ce"
+        },
+        {
+            "article_ref": "CC ART. 28cf"
+        },
+        {
+            "article_ref": "CC ART. 28cg"
+        },
+        {
+            "article_ref": "CC ART. 28ch"
+        },
+        {
+            "article_ref": "CC ART. 28ci"
+        },
+        {
+            "article_ref": "CC ART. 28cj"
+        },
+        {
+            "article_ref": "CC ART. 28ck"
+        },
+        {
+            "article_ref": "CC ART. 28cl"
+        },
+        {
+            "article_ref": "CC ART. 28cm"
+        },
+        {
+            "article_ref": "CC ART. 28cn"
+        },
+        {
+            "article_ref": "CC ART. 28co"
+        },
+        {
+            "article_ref": "CC ART. 28cp"
+        },
+        {
+            "article_ref": "CC ART. 28cq"
+        },
+        {
+            "article_ref": "CC ART. 28cr"
+        },
+        {
+            "article_ref": "CC ART. 28cs"
+        },
+        {
+            "article_ref": "CC ART. 28ct"
+        },
+        {
+            "article_ref": "CC ART. 28cu"
+        },
+        {
+            "article_ref": "CC ART. 28cv"
+        },
+        {
+            "article_ref": "CC ART. 28cw"
+        },
+        {
+            "article_ref": "CC ART. 28cx"
+        },
+        {
+            "article_ref": "CC ART. 28cy"
+        },
+        {
+            "article_ref": "CC ART. 28cz"
+        },
+        {
+            "article_ref": "CC ART. 28da"
+        },
+        {
+            "article_ref": "CC ART. 28db"
+        },
+        {
+            "article_ref": "CC ART. 28dc"
+        },
+        {
+            "article_ref": "CC ART. 28dd"
+        },
+        {
+            "article_ref": "CC ART. 28de"
+        },
+        {
+            "article_ref": "CC ART. 28df"
+        },
+        {
+            "article_ref": "CC ART. 28dg"
+        },
+        {
+            "article_ref": "CC ART. 28dh"
+        },
+        {
+            "article_ref": "CC ART. 28di"
+        },
+        {
+            "article_ref": "CC ART. 28dj"
+        },
+        {
+            "article_ref": "CC ART. 28dk"
+        },
+        {
+            "article_ref": "CC ART. 28dl"
+        },
+        {
+            "article_ref": "CC ART. 28dm"
+        },
+        {
+            "article_ref": "CC ART. 28dn"
+        },
+        {
+            "article_ref": "CC ART. 28do"
+        },
+        {
+            "article_ref": "CC ART. 28dp"
+        },
+        {
+            "article_ref": "CC ART. 28dq"
+        },
+        {
+            "article_ref": "CC ART. 28dr"
+        },
+        {
+            "article_ref": "CC ART. 28ds"
+        },
+        {
+            "article_ref": "CC ART. 28dt"
+        },
+        {
+            "article_ref": "CC ART. 28du"
+        },
+        {
+            "article_ref": "CC ART. 28dv"
+        },
+        {
+            "article_ref": "CC ART. 28dw"
+        },
+        {
+            "article_ref": "CC ART. 28dx"
+        },
+        {
+            "article_ref": "CC ART. 28dy"
+        },
+        {
+            "article_ref": "CC ART. 28dz"
+        },
+        {
+            "article_ref": "CC ART. 28ea"
+        },
+        {
+            "article_ref": "CC ART. 28eb"
+        },
+        {
+            "article_ref": "CC ART. 28ec"
+        },
+        {
+            "article_ref": "CC ART. 28ed"
+        },
+        {
+            "article_ref": "CC ART. 28ee"
+        },
+        {
+            "article_ref": "CC ART. 28ef"
+        },
+        {
+            "article_ref": "CC ART. 28eg"
+        },
+        {
+            "article_ref": "CC ART. 28eh"
+        },
+        {
+            "article_ref": "CC ART. 28ei"
+        },
+        {
+            "article_ref": "CC ART. 28ej"
+        },
+        {
+            "article_ref": "CC ART. 28ek"
+        },
+        {
+            "article_ref": "CC ART. 28el"
+        },
+        {
+            "article_ref": "CC ART. 28em"
+        },
+        {
+            "article_ref": "CC ART. 28en"
+        },
+        {
+            "article_ref": "CC ART. 28eo"
+        },
+        {
+            "article_ref": "CC ART. 28ep"
+        },
+        {
+            "article_ref": "CC ART. 28eq"
+        },
+        {
+            "article_ref": "CC ART. 28er"
+        },
+        {
+            "article_ref": "CC ART. 28es"
+        },
+        {
+            "article_ref": "CC ART. 28et"
+        },
+        {
+            "article_ref": "CC ART. 28eu"
+        },
+        {
+            "article_ref": "CC ART. 28ev"
+        },
+        {
+            "article_ref": "CC ART. 28ew"
+        },
+        {
+            "article_ref": "CC ART. 28ex"
+        },
+        {
+            "article_ref": "CC ART. 28ey"
+        },
+        {
+            "article_ref": "CC ART. 28ez"
+        },
+        {
+            "article_ref": "CC ART. 28fa"
+        },
+        {
+            "article_ref": "CC ART. 28fb"
+        },
+        {
+            "article_ref": "CC ART. 28fc"
+        },
+        {
+            "article_ref": "CC ART. 28fd"
+        },
+        {
+            "article_ref": "CC ART. 28fe"
+        },
+        {
+            "article_ref": "CC ART. 28ff"
+        },
+        {
+            "article_ref": "CC ART. 28fg"
+        },
+        {
+            "article_ref": "CC ART. 28fh"
+        },
+        {
+            "article_ref": "CC ART. 28fi"
+        },
+        {
+            "article_ref": "CC ART. 28fj"
+        },
+        {
+            "article_ref": "CC ART. 28fk"
+        },
+        {
+            "article_ref": "CC ART. 28fl"
+        },
+        {
+            "article_ref": "CC ART. 28fm"
+        },
+        {
+            "article_ref": "CC ART. 28fn"
+        },
+        {
+            "article_ref": "CC ART. 28fo"
+        },
+        {
+            "article_ref": "CC ART. 28fp"
+        },
+        {
+            "article_ref": "CC ART. 28fq"
+        },
+        {
+            "article_ref": "CC ART. 28fr"
+        },
+        {
+            "article_ref": "CC ART. 28fs"
+        },
+        {
+            "article_ref": "CC ART. 28ft"
+        },
+       
+
+Output:
+```json
+{
+    "articles": [
+        {
+            "article_ref": "OR ART. 184"
+        },
+        {
+            "article_ref": "OR ART. 187"
+        },
+        {
+            "article_ref": "OR ART. 208"
+        },
+        {
+            "article_ref": "OR ART. 394"
+        },
+        {
+            "article_ref": "OR ART. 399"
+        },
+        {
+            "article_ref": "OR ART. 400"
+        },
+        {
+            "article_ref": "OR ART. 401"
+        },
+        {
+            "article_ref": "OR ART. 404"
+        },
+        {
+            "article_ref": "OR ART. 405"
+        },
+        {
+            "article_ref": "OR ART. 412"
+        },
+        {
+            "article_ref": "OR ART. 423"
+        },
+        {
+            "article_ref": "OR ART. 424"
+        },
+        {
+            "article_ref": "OR ART. 425"
+        },
+        {
+            "article_ref": "OR ART. 426"
+        },
+        {
+            "article_ref": "OR ART. 427"
+        },
+        {
+            "article_ref": "OR ART. 428"
+        },
+        {
+            "article_ref": "OR ART. 429"
+        },
+        {
+            "article_ref": "OR ART. 430"
+        },
+        {
+            "article_ref": "OR ART. 431"
+        },
+        {
+            "article_ref": "OR ART. 432"
+        },
+        {
+            "article_ref": "OR ART. 433"
+        },
+        {
+            "article_ref": "OR ART. 434"
+        },
+        {
+            "article_ref": "OR ART. 435"
+        },
+        {
+            "article_ref": "OR ART. 436"
+        },
+        {
+            "article_ref": "OR ART. 437"
+        },
+        {
+            "article_ref": "OR ART. 438"
+        },
+        {
+            "article_ref": "OR ART. 439"
+        },
+        {
+            "article_ref": "OR ART. 440"
+        },
+        {
+            "article_ref": "OR ART. 441"
+        },
+        {
+            "article_ref": "OR ART. 442"
+        },
+        {
+            "article_ref": "OR ART. 443"
+        },
+        {
+            "article_ref": "OR ART. 444"
+        },
+        {
+            "article_ref": "OR ART. 445"
+        },
+        {
+            "article_ref": "OR ART. 446"
+        },
+        {
+            "article_ref": "OR ART. 447"
+        },
+        {
+            "article_ref": "OR ART. 448"
+        },
+        {
+            "article_ref": "OR ART. 449"
+        },
+        {
+            "article_ref": "OR ART. 450"
+        },
+        {
+            "article_ref": "OR ART. 451"
+        },
+        {
+            "article_ref": "OR ART. 452"
+        },
+        {
+            "article_ref": "OR ART. 453"
+        },
+        {
+            "article_ref": "OR ART. 454"
+        },
+        {
+            "article_ref": "OR ART. 455"
+        },
+        {
+            "article_ref": "OR ART. 456"
+        },
+        {
+            "article_ref": "OR ART. 457"
+        },
+        {
+            "article_ref": "OR ART. 458"
+        },
+        {
+            "article_ref": "OR ART. 459"
+        },
+        {
+            "article_ref": "OR ART. 460"
+        },
+        {
+            "article_ref": "OR ART. 461"
+        },
+        {
+            "article_ref": "OR ART. 462"
+        },
+        {
+            "article_ref": "OR ART. 463"
+        },
+        {
+            "article_ref": "OR ART. 464"
+        },
+        {
+            "article_ref": "OR ART. 465"
+        },
+        {
+            "article_ref": "OR ART. 466"
+        },
+        {
+            "article_ref": "OR ART. 467"
+        },
+        {
+            "article_ref": "OR ART. 468"
+        },
+        {
+            "article_ref": "OR ART. 469"
+        },
+        {
+            "article_ref": "OR ART. 470"
+        },
+        {
+            "article_ref": "OR ART. 471"
+        },
+        {
+            "article_ref": "OR ART. 472"
+        },
+        {
+            "article_ref": "OR ART. 473"
+        },
+        {
+            "article_ref": "OR ART. 474"
+        },
+        {
+            "article_ref": "OR ART. 475"
+        },
+        {
+            "article_ref": "OR ART. 476"
+        },
+        {
+            "article_ref": "OR ART. 477"
+        },
+        {
+            "article_ref": "OR ART. 478"
+        },
+        {
+            "article_ref": "OR ART. 479"
+        },
+        {
+            "article_ref": "OR ART. 480"
+        },
+        {
+            "article_ref": "OR ART. 481"
+        },
+        {
+            "article_ref": "OR ART. 482"
+        },
+        {
+            "article_ref": "OR ART. 483"
+        },
+        {
+            "article_ref": "OR ART. 484"
+        },
+        {
+            "article_ref": "OR ART. 485"
+        },
+        {
+            "article_ref": "OR ART. 486"
+        },
+        {
+            "article_ref": "OR ART. 487"
+        },
+        {
+            "article_ref": "OR ART. 488"
+        },
+        {
+            "article_ref": "OR ART. 489"
+        },
+        {
+            "article_ref": "OR ART. 490"
+        },
+        {
+            "article_ref": "OR ART. 491"
+        },
+        {
+            "article_ref": "OR ART. 492"
+        },
+        {
+            "article_ref": "OR ART. 493"
+        },
+        {
+            "article_ref": "OR ART. 494"
+        },
+        {
+            "article_ref": "OR ART. 495"
+        },
+        {
+            "article_ref": "OR ART. 496"
+        },
+        {
+            "article_ref": "OR ART. 497"
+        },
+        {
+            "article_ref": "OR ART. 498"
+        },
+        {
+            "article_ref": "OR ART. 499"
+        },
+        {
+            "article_ref": "OR ART. 500"
+        },
+        {
+            "article_ref": "OR ART. 501"
+        },
+        {
+            "article_ref": "OR ART. 502"
+        },
+        {
+            "article_ref": "OR ART. 503"
+        },
+        {
+            "article_ref": "OR ART. 504"
+        },
+        {
+            "article_ref": "OR ART. 505"
+        },
+        {
+            "article_ref": "OR ART. 506"
+        },
+        {
+            "article_ref": "OR ART. 507"
+        },
+        {
+            "article_ref": "OR ART. 508"
+        },
+        {
+            "article_ref": "OR ART. 509"
+        },
+        {
+            "article_ref": "OR ART. 510"
+        },
+        {
+            "article_ref": "OR ART. 511"
+        },
+        {
+            "article_ref": "OR ART. 512"
+        },
+        {
+            "article_ref": "OR ART. 513"
+        },
+        {
+            "article_ref": "OR ART. 514"
+        },
+        {
+            "article_ref": "OR ART. 515"
+        },
+        {
+            "article_ref": "OR ART. 516"
+        },
+        {
+            "article_ref": "OR ART. 517"
+        },
+        {
+            "article_ref": "OR ART. 518"
+        },
+        {
+            "article_ref": "OR ART. 519"
+        },
+        {
+            "article_ref": "OR ART. 520"
+        },
+        {
+            "article_ref": "OR ART. 521"
+        },
+        {
+            "article_ref": "OR ART. 522"
+        },
+        {
+            "article_ref": "OR ART. 523"
+        },
+        {
+            "article_ref": "OR ART. 524"
+        },
+        {
+            "article_ref": "OR ART. 525"
+        },
+        {
+            "article_ref": "OR ART. 526"
+        },
+        {
+            "article_ref": "OR ART. 527"
+        },
+        {
+            "article_ref": "OR ART. 528"
+        },
+        {
+            "article_ref": "OR ART. 529"
+        },
+        {
+            "article_ref": "OR ART. 530"
+        },
+        {
+            "article_ref": "OR ART. 531"
+        },
+        {
+            "article_ref": "OR ART. 532"
+        },
+        {
+            "article_ref": "OR ART. 533"
+        },
+        {
+            "article_ref": "OR ART. 534"
+        },
+        {
+            "article_ref": "OR ART. 535"
+        },
+        {
+            "article_ref": "OR ART. 536"
+        },
+        {
+            "article_ref": "OR ART. 537"
+        },
+        {
+            "article_ref": "OR ART. 538"
+        },
+        {
+            "article_ref": "OR ART. 539"
+        },
+        {
+            "article_ref": "OR ART. 540"
+        },
+        {
+            "article_ref": "OR ART. 541"
+        },
+        {
+            "article_ref": "OR ART. 542"
+        },
+        {
+            "article_ref": "OR ART. 543"
+        },
+        {
+            "article_ref": "OR ART. 544"
+        },
+        {
+            "article_ref": "OR ART. 545"
+        },
+        {
+            "article_ref": "OR ART. 546"
+        },
+        {
+            "article_ref": "OR ART. 547"
+        },
+        {
+            "article_ref": "OR ART. 548"
+        },
+        {
+            "article_ref": "OR ART. 549"
+        },
+        {
+            "article_ref": "OR ART. 550"
+        },
+        {
+            "article_ref": "OR ART. 551"
+        },
+        {
+            "article_ref": "OR ART. 552"
+        },
+        {
+            "article_ref": "OR ART. 553"
+        },
+        {
+            "article_ref": "OR ART. 554"
+        },
+        {
+            "article_ref": "OR ART. 555"
+        },
+        {
+            "article_ref": "OR ART. 556"
+        },
+        {
+            "article_ref": "OR ART. 557"
+        },
+        {
+            "article_ref": "OR ART. 558"
+        },
+        {
+            "article_ref": "OR ART. 559"
+        },
+        {
+            "article_ref": "OR ART. 560"
+        },
+        {
+            "article_ref": "OR ART. 561"
+        },
+        {
+            "article_ref": "OR ART. 562"
+        },
+        {
+            "article_ref": "OR ART. 563"
+        },
+        {
+            "article_ref": "OR ART. 564"
+        },
+        {
+            "article_ref": "OR ART. 565"
+        },
+        {
+            "article_ref": "OR ART. 566"
+        },
+        {
+            "article_ref": "OR ART. 567"
+        },
+        {
+            "article_ref": "OR ART. 568"
+        },
+        {
+            "article_ref": "OR ART. 569"
+        },
+        {
+            "article_ref": "OR ART. 570"
+        },
+        {
+            "article_ref": "OR ART. 571"
+        },
+        {
+            "article_ref": "OR ART. 572"
+        },
+        {
+            "article_ref": "OR ART. 573"
+        },
+        {
+            "article_ref": "OR ART. 574"
+        },
+        {
+            "article_ref": "OR ART. 575"
+        },
+        {
+            "article_ref": "OR ART. 576"
+        },
+        {
+            "article_ref": "OR ART. 577"
+        },
+        {
+            "article_ref": "OR ART. 578"
+        },
+        {
+            "article_ref": "OR ART. 579"
+        },
+        {
+            "article_ref": "OR ART. 580"
+        },
+        {
+            "article_ref": "OR ART. 581"
+        },
+        {
+            "article_ref": "OR ART. 582"
+        },
+        {
+            "article_ref": "OR ART. 583"
+        },
+        {
+            "article_ref": "OR ART. 584"
+        },
+        {
+            "article_ref": "OR ART. 585"
+        },
+        {
+            "article_ref": "OR ART. 586"
+        },
+        {
+            "article_ref": "OR ART. 587"
+        },
+        {
+            "article_ref": "OR ART. 588"
+        },
+        {
+            "article_ref": "OR ART. 589"
+        },
+        {
+            "article_ref": "OR ART. 590"
+        },
+        {
+            "article_ref": "OR ART. 591"
+        },
+        {
+            "article_ref": "OR ART. 592"
+        },
+        {
+            "article_ref": "OR ART. 593"
+        },
+        {
+            "article_ref": "OR ART. 594"
+        },
+        {
+            "article_ref": "OR ART. 595"
+        },
+        {
+            "article_ref": "OR ART. 596"
+        },
+        {
+            "article_ref": "OR ART. 597"
+        },
+        {
+            "article_ref": "OR ART. 598"
+        },
+        {
+            "article_ref": "OR ART. 599"
+       
+
+Output:
+{
+    "articles": [
+        {
+            "article_ref": "OR ART. 184"
+        },
+        {
+            "article_ref": "OR ART. 185"
+        },
+        {
+            "article_ref": "OR ART. 187"
+        },
+        {
+            "article_ref": "OR ART. 188"
+        },
+        {
+            "article_ref": "OR ART. 189"
+        },
+        {
+            "article_ref": "OR ART. 191"
+        },
+        {
+            "article_ref": "OR ART. 192"
+        },
+        {
+            "article_ref": "OR ART. 194"
+        },
+        {
+            "article_ref": "OR ART. 195"
+        },
+        {
+            "article_ref": "OR ART. 196"
+        },
+        {
+            "article_ref": "OR ART. 197"
+        },
+        {
+            "article_ref": "OR ART. 198"
+        },
+        {
+            "article_ref": "OR ART. 199"
+        },
+        {
+            "article_ref": "OR ART. 201"
+        },
+        {
+            "article_ref": "OR ART. 202"
+        },
+        {
+            "article_ref": "OR ART. 203"
+        },
+        {
+            "article_ref": "OR ART. 205"
+        },
+        {
+            "article_ref": "OR ART. 208"
+        },
+        {
+            "article_ref": "OR ART. 209"
+        },
+        {
+            "article_ref": "OR ART. 210"
+        },
+        {
+            "article_ref": "OR ART. 211"
+        },
+        {
+            "article_ref": "OR ART. 212"
+        },
+        {
+            "article_ref": "OR ART. 213"
+        },
+        {
+            "article_ref": "OR ART. 216"
+        },
+        {
+            "article_ref": "OR ART. 217"
+        },
+        {
+            "article_ref": "OR ART. 218"
+        },
+        {
+            "article_ref": "OR ART. 219"
+        },
+        {
+            "article_ref": "OR ART. 220"
+        },
+        {
+            "article_ref": "OR ART. 221"
+        },
+        {
+            "article_ref": "OR ART. 222"
+        },
+        {
+            "article_ref": "OR ART. 223"
+        },
+        {
+            "article_ref": "OR ART. 224"
+        },
+        {
+            "article_ref": "OR ART. 225"
+        },
+        {
+            "article_ref": "OR ART. 226"
+        },
+        {
+            "article_ref": "OR ART. 227"
+        },
+        {
+            "article_ref": "OR ART. 228"
+        },
+        {
+            "article_ref": "OR ART. 229"
+        },
+        {
+            "article_ref": "OR ART. 230"
+        },
+        {
+            "article_ref": "OR ART. 231"
+        },
+        {
+            "article_ref": "OR ART. 232"
+        },
+        {
+            "article_ref": "OR ART. 233"
+        },
+        {
+            "article_ref": "OR ART. 234"
+        },
+        {
+            "article_ref": "OR ART. 235"
+        },
+        {
+            "article_ref": "OR ART. 236"
+        },
+        {
+            "article_ref": "OR ART. 237"
+        },
+        {
+            "article_ref": "OR ART. 238"
+        },
+        {
+            "article_ref": "OR ART. 239"
+        },
+        {
+            "article_ref": "OR ART. 240"
+        },
+        {
+            "article_ref": "OR ART. 241"
+        },
+        {
+            "article_ref": "OR ART. 242"
+        },
+        {
+            "article_ref": "OR ART. 243"
+        },
+        {
+            "article_ref": "OR ART. 244"
+        },
+        {
+            "article_ref": "OR ART. 245"
+        },
+        {
+            "article_ref": "OR ART. 246"
+        },
+        {
+            "article_ref": "OR ART. 247"
+        },
+        {
+            "article_ref": "OR ART. 248"
+        },
+        {
+            "article_ref": "OR ART. 249"
+        },
+        {
+            "article_ref": "OR ART. 250"
+        },
+        {
+            "article_ref": "OR ART. 251"
+        },
+        {
+            "article_ref": "OR ART. 252"
+        },
+        {
+            "article_ref": "OR ART. 253"
+        },
+        {
+            "article_ref": "OR ART. 254"
+        },
+        {
+            "article_ref": "OR ART. 255"
+        },
+        {
+            "article_ref": "OR ART. 256"
+        },
+        {
+            "article_ref": "OR ART. 257"
+        },
+        {
+            "article_ref": "OR ART. 258"
+        },
+        {
+            "article_ref": "OR ART. 259"
+        },
+        {
+            "article_ref": "OR ART. 260"
+        },
+        {
+            "article_ref": "OR ART. 261"
+        },
+        {
+            "article_ref": "OR ART. 262"
+        },
+        {
+            "article_ref": "OR ART. 263"
+        },
+        {
+            "article_ref": "OR ART. 264"
+        },
+        {
+            "article_ref": "OR ART. 265"
+        },
+        {
+            "article_ref": "OR ART. 266"
+        },
+        {
+            "article_ref": "OR ART. 267"
+        },
+        {
+            "article_ref": "OR ART. 268"
+        },
+        {
+            "article_ref": "OR ART. 269"
+        },
+        {
+            "article_ref": "OR ART. 270"
+        },
+        {
+            "article_ref": "OR ART. 271"
+        },
+        {
+            "article_ref": "OR ART. 272"
+        },
+        {
+            "article_ref": "OR ART. 273"
+        },
+        {
+            "article_ref": "OR ART. 274"
+        },
+        {
+            "article_ref": "OR ART. 275"
+        },
+        {
+            "article_ref": "OR ART. 276"
+        },
+        {
+            "article_ref": "OR ART. 277"
+        },
+        {
+            "article_ref": "OR ART. 278"
+        },
+        {
+            "article_ref": "OR ART. 279"
+        },
+        {
+            "article_ref": "OR ART. 280"
+        },
+        {
+            "article_ref": "OR ART. 281"
+        },
+        {
+            "article_ref": "OR ART. 282"
+        },
+        {
+            "article_ref": "OR ART. 283"
+        },
+        {
+            "article_ref": "OR ART. 284"
+        },
+        {
+            "article_ref": "OR ART. 285"
+        },
+        {
+            "article_ref": "OR ART. 286"
+        },
+        {
+            "article_ref": "OR ART. 287"
+        },
+        {
+            "article_ref": "OR ART. 288"
+        },
+        {
+            "article_ref": "OR ART. 289"
+        },
+        {
+            "article_ref": "OR ART. 290"
+        },
+        {
+            "article_ref": "OR ART. 291"
+        },
+        {
+            "article_ref": "OR ART. 292"
+        },
+        {
+            "article_ref": "OR ART. 293"
+        },
+        {
+            "article_ref": "OR ART. 294"
+        },
+        {
+            "article_ref": "OR ART. 295"
+        },
+        {
+            "article_ref": "OR ART. 296"
+        },
+        {
+            "article_ref": "OR ART. 297"
+        },
+        {
+            "article_ref": "OR ART. 298"
+        },
+        {
+            "article_ref": "OR ART. 299"
+        },
+        {
+            "article_ref": "OR ART. 300"
+        },
+        {
+            "article_ref": "OR ART. 301"
+        },
+        {
+            "article_ref": "OR ART. 302"
+        },
+        {
+            "article_ref": "OR ART. 303"
+        },
+        {
+            "article_ref": "OR ART. 304"
+        },
+        {
+            "article_ref": "OR ART. 305"
+        },
+        {
+            "article_ref": "OR ART. 306"
+        },
+        {
+            "article_ref": "OR ART. 307"
+        },
+        {
+            "article_ref": "OR ART. 308"
+        },
+        {
+            "article_ref": "OR ART. 309"
+        },
+        {
+            "article_ref": "OR ART. 310"
+        },
+        {
+            "article_ref": "OR ART. 311"
+        },
+        {
+            "article_ref": "OR ART. 312"
+        },
+        {
+            "article_ref": "OR ART. 313"
+        },
+        {
+            "article_ref": "OR ART. 314"
+        },
+        {
+            "article_ref": "OR ART. 315"
+        },
+        {
+            "article_ref": "OR ART. 316"
+        },
+        {
+            "article_ref": "OR ART. 317"
+        },
+        {
+            "article_ref": "OR ART. 318"
+        },
+        {
+            "article_ref": "OR ART. 319"
+        },
+        {
+            "article_ref": "OR ART. 320"
+        },
+        {
+            "article_ref": "OR ART. 321"
+        },
+        {
+            "article_ref": "OR ART. 322"
+        },
+        {
+            "article_ref": "OR ART. 323"
+        },
+        {
+            "article_ref": "OR ART. 324"
+        },
+        {
+            "article_ref": "OR ART. 325"
+        },
+        {
+            "article_ref": "OR ART. 326"
+        },
+        {
+            "article_ref": "OR ART. 327"
+        },
+        {
+            "article_ref": "OR ART. 328"
+        },
+        {
+            "article_ref": "OR ART. 329"
+        },
+        {
+            "article_ref": "OR ART. 330"
+        },
+        {
+            "article_ref": "OR ART. 331"
+        },
+        {
+            "article_ref": "OR ART. 332"
+        },
+        {
+            "article_ref": "OR ART. 333"
+        },
+        {
+            "article_ref": "OR ART. 334"
+        },
+        {
+            "article_ref": "OR ART. 335"
+        },
+        {
+            "article_ref": "OR ART. 336"
+        },
+        {
+            "article_ref": "OR ART. 337"
+        },
+        {
+            "article_ref": "OR ART. 338"
+        },
+        {
+            "article_ref": "OR ART. 339"
+        },
+        {
+            "article_ref": "OR ART. 340"
+        },
+        {
+            "article_ref": "OR ART. 341"
+        },
+        {
+            "article_ref": "OR ART. 342"
+        },
+        {
+            "article_ref": "OR ART. 343"
+        },
+        {
+            "article_ref": "OR ART. 344"
+        },
+        {
+            "article_ref": "OR ART. 345"
+        },
+        {
+            "article_ref": "OR ART. 346"
+        },
+        {
+            "article_ref": "OR ART. 347"
+        },
+        {
+            "article_ref": "OR ART. 348"
+        },
+        {
+            "article_ref": "OR ART. 349"
+        },
+        {
+            "article_ref": "OR ART. 350"
+        },
+        {
+            "article_ref": "OR ART. 351"
+        },
+        {
+            "article_ref": "OR ART. 352"
+        },
+        {
+            "article_ref": "OR ART. 353"
+        },
+        {
+            "article_ref": "OR ART. 354"
+        },
+        {
+            "article_ref": "OR ART. 355"
+        },
+        {
+            "article_ref": "OR ART. 356"
+        },
+        {
+            "article_ref": "OR ART. 357"
+        },
+        {
+            "article_ref": "OR ART. 358"
+        },
+        {
+            "article_ref": "OR ART. 359"
+        },
+        {
+            "article_ref": "OR ART. 360"
+        },
+        {
+            "article_ref": "OR ART. 361"
+        },
+        {
+            "article_ref": "OR ART. 362"
+        },
+        {
+            "article_ref": "OR ART. 363"
+        },
+        {
+            "article_ref": "OR ART. 364"
+        },
+        {
+            "article_ref": "OR ART. 365"
+        },
+        {
+            "article_ref": "OR ART. 366"
+        },
+        {
+            "article_ref": "OR ART. 367"
+        },
+        {
+            "article_ref": "OR ART. 368"
+        },
+        {
+            "article_ref": "OR ART. 369"
+        },
+        {
+            "article_ref": "OR ART. 370"
+        },
+        {
+            "article_ref": "OR ART. 371"
+        },
+        {
+            "article_ref": "OR ART. 372"
+        },
+        {
+            "article_ref": "OR ART. 373"
+        },
+        {
+            "article_ref": "OR ART. 374"
+        },
+        {
+            "article_ref": "OR ART. 375"
+        },
+        {
+            "article_ref": "OR ART. 376"
+        },
+        {
+            "article_ref": "OR ART. 377"
+        },
+        {
+            "article_ref": "OR ART. 378"
+        },
+        {
+            "article_ref": "OR ART. 379"
+        },
+        {
+
+
+Output:
+{
+    "articles": [
+        {
+            "article_ref": "ZGB ART. 28 Abs. 1"
+        },
+        {
+            "article_ref": "ZGB ART. 28 Abs. 2"
+        },
+        {
+            "article_ref": "ZGB ART. 29 Abs. 1"
+        },
+        {
+            "article_ref": "ZGB ART. 30 Abs. 1"
+        },
+        {
+            "article_ref": "ZGB ART. 43 Abs. 1"
+        },
+        {
+            "article_ref": "ZGB ART. 43 Abs. 2"
+        },
+        {
+            "article_ref": "ZGB ART. 328 Abs. 1"
+        },
+        {
+            "article_ref": "ZGB ART. 334 Abs. 1"
+        },
+        {
+            "article_ref": "ZGB ART. 334 Abs. 2"
+        },
+        {
+            "article_ref": "OR ART. 62 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 62 Abs. 2"
+        },
+        {
+            "article_ref": "OR ART. 423 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 423 Abs. 2"
+        }
+    ]
+}
+
+Output:
+{
+    "articles": [
+        {
+            "article_ref": "OR ART. 184 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 97 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 62 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 185 Abs. 1"
+        }
+    ]
+}
+
+Output:
+{
+    "articles": [
+        {
+            "article_ref": "OR ART. 184 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 97 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 98 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 216 Abs. 1"
+        },
+        {
+            "article_ref": "OR ART. 216 Abs. 2"
+        },
+        {
+            "article_ref": "OR ART. 119 Abs. 1"
+        }
+    ]
+}
+
+Output:
+{'articles': []}
+
+Output:
+{
+    "articles": [
+        {
+            "article_ref": "OR ART. 184"
+        },
+        {
+            "article_ref": "OR ART. 185"
+        },
+        {
+            "article_ref": "OR ART. 187"
+        }
+    ]
+}
+
+Output:
+{
+    "articles": [
+        {
+            "article_ref": "OR ART. 184"
+        },
+        {
+            "article_ref": "OR ART. 185"
+        },
+        {
+            "article_ref": "OR ART. 187"
+        },
+        {
+            "article_ref": "OR ART. 189"
+        },
+        {
+            "article_ref": "OR ART. 190"
+        },
+        {
+            "article_ref": "OR ART. 191"
+        },
+        {
+            "article_ref": "OR ART. 192"
+        },
+        {
+            "article_ref": "OR ART. 193"
+        },
+        {
+            "article_ref": "OR ART. 194"
+        },
+        {
+            "article_ref": "OR ART. 195"
+        },
+        {
+            "article_ref": "OR ART. 196"
+        },
+        {
+            "article_ref": "OR ART. 197"
+        },
+        {
+            "article_ref": "OR ART. 198"
+        },
+        {
+            "article_ref": "OR ART. 199"
+        },
+        {
+            "article_ref": "OR ART. 200"
+        },
+        {
+            "article_ref": "OR ART. 201"
+        },
+        {
+            "article_ref": "OR ART. 202"
+        },
+        {
+            "article_ref": "OR ART. 203"
+        },
+        {
+            "article_ref": "OR ART. 204"
+        },
+        {
+            "article_ref": "OR ART. 205"
+        },
+        {
+            "article_ref": "OR ART. 206"
+        },
+        {
+            "article_ref": "OR ART. 207"
+        },
+        {
+            "article_ref": "OR ART. 208"
+        },
+        {
+            "article_ref": "OR ART. 209"
+        },
+        {
+            "article_ref": "OR ART. 210"
+        },
+        {
+            "article_ref": "OR ART. 211"
+        },
+        {
+            "article_ref": "OR ART. 212"
+        },
+        {
+            "article_ref": "OR ART. 213"
+        },
+        {
+            "article_ref": "OR ART. 214"
+        },
+        {
+            "article_ref": "OR ART. 215"
+        },
+        {
+            "article_ref": "OR ART. 216"
+        },
+        {
+            "article_ref": "OR ART. 217"
+        },
+        {
+            "article_ref": "OR ART. 218"
+        },
+        {
+            "article_ref": "OR ART. 219"
+        },
+        {
+            "article_ref": "OR ART. 220"
+        },
+        {
+            "article_ref": "OR ART. 221"
+        },
+        {
+            "article_ref": "OR ART. 222"
+        },
+        {
+            "article_ref": "OR ART. 223"
+        },
+        {
+            "article_ref": "OR ART. 224"
+        },
+        {
+            "article_ref": "OR ART. 225"
+        },
+        {
+            "article_ref": "OR ART. 226"
+        },
+        {
+            "article_ref": "OR ART. 227"
+        },
+        {
+            "article_ref": "OR ART. 228"
+        },
+        {
+            "article_ref": "OR ART. 229"
+        },
+        {
+            "article_ref": "OR ART. 230"
+        },
+        {
+            "article_ref": "OR ART. 231"
+        },
+        {
+            "article_ref": "OR ART. 232"
+        },
+        {
+            "article_ref": "OR ART. 233"
+        },
+        {
+            "article_ref": "OR ART. 234"
+        },
+        {
+            "article_ref": "OR ART. 235"
+        },
+        {
+            "article_ref": "OR ART. 236"
+        },
+        {
+            "article_ref": "OR ART. 237"
+        },
+        {
+            "article_ref": "OR ART. 238"
+        },
+        {
+            "article_ref": "OR ART. 239"
+        },
+        {
+            "article_ref": "OR ART. 240"
+        },
+        {
+            "article_ref": "OR ART. 241"
+        },
+        {
+            "article_ref": "OR ART. 242"
+        },
+        {
+            "article_ref": "OR ART. 243"
+        },
+        {
+            "article_ref": "OR ART. 244"
+        },
+        {
+            "article_ref": "OR ART. 245"
+        },
+        {
+            "article_ref": "OR ART. 246"
+        },
+        {
+            "article_ref": "OR ART. 247"
+        },
+        {
+            "article_ref": "OR ART. 248"
+        },
+        {
+            "article_ref": "OR ART. 249"
+        },
+        {
+            "article_ref": "OR ART. 250"
+        },
+        {
+            "article_ref": "OR ART. 251"
+        },
+        {
+            "article_ref": "OR ART. 252"
+        },
+        {
+            "article_ref": "OR ART. 253"
+        },
+        {
+            "article_ref": "OR ART. 254"
+        },
+        {
+            "article_ref": "OR ART. 255"
+        },
+        {
+            "article_ref": "OR ART. 256"
+        },
+        {
+            "article_ref": "OR ART. 257"
+        },
+        {
+            "article_ref": "OR ART. 258"
+        },
+        {
+            "article_ref": "OR ART. 259"
+        },
+        {
+            "article_ref": "OR ART. 260"
+        },
+        {
+            "article_ref": "OR ART. 261"
+        },
+        {
+            "article_ref": "OR ART. 262"
+        },
+        {
+            "article_ref": "OR ART. 263"
+        },
+        {
+            "article_ref": "OR ART. 264"
+        },
+        {
+            "article_ref": "OR ART. 265"
+        },
+        {
+            "article_ref": "OR ART. 266"
+        },
+        {
+            "article_ref": "OR ART. 267"
+        },
+        {
+            "article_ref": "OR ART. 268"
+        },
+        {
+            "article_ref": "OR ART. 269"
+        },
+        {
+            "article_ref": "OR ART. 270"
+        },
+        {
+            "article_ref": "OR ART. 271"
+        },
+        {
+            "article_ref": "OR ART. 272"
+        },
+        {
+            "article_ref": "OR ART. 273"
+        },
+        {
+            "article_ref": "OR ART. 274"
+        },
+        {
+            "article_ref": "OR ART. 275"
+        },
+        {
+            "article_ref": "OR ART. 276"
+        },
+        {
+            "article_ref": "OR ART. 277"
+        },
+        {
+            "article_ref": "OR ART. 278"
+        },
+        {
+            "article_ref": "OR ART. 279"
+        },
+        {
+            "article_ref": "OR ART. 280"
+        },
+        {
+            "article_ref": "OR ART. 281"
+        },
+        {
+            "article_ref": "OR ART. 282"
+        },
+        {
+            "article_ref": "OR ART. 283"
+        },
+        {
+            "article_ref": "OR ART. 284"
+        },
+        {
+            "article_ref": "OR ART. 285"
+        },
+        {
+            "article_ref": "OR ART. 286"
+        },
+        {
+            "article_ref": "OR ART. 287"
+        },
+        {
+            "article_ref": "OR ART. 288"
+        },
+        {
+            "article_ref": "OR ART. 289"
+        },
+        {
+            "article_ref": "OR ART. 290"
+        },
+        {
+            "article_ref": "OR ART. 291"
+        },
+        {
+            "article_ref": "OR ART. 292"
+        },
+        {
+            "article_ref": "OR ART. 293"
+        },
+        {
+            "article_ref": "OR ART. 294"
+        },
+        {
+            "article_ref": "OR ART. 295"
+        },
+        {
+            "article_ref": "OR ART. 296"
+        },
+        {
+            "article_ref": "OR ART. 297"
+        },
+        {
+            "article_ref": "OR ART. 298"
+        },
+        {
+            "article_ref": "OR ART. 299"
+        },
+        {
+            "article_ref": "OR ART. 300"
+        },
+        {
+            "article_ref": "OR ART. 301"
+        },
+        {
+            "article_ref": "OR ART. 302"
+        },
+        {
+            "article_ref": "OR ART. 303"
+        },
+        {
+            "article_ref": "OR ART. 304"
+        },
+        {
+            "article_ref": "OR ART. 305"
+        },
+        {
+            "article_ref": "OR ART. 306"
+        },
+        {
+            "article_ref": "OR ART. 307"
+        },
+        {
+            "article_ref": "OR ART. 308"
+        },
+        {
+            "article_ref": "OR ART. 309"
+        },
+        {
+            "article_ref": "OR ART. 310"
+        },
+        {
+            "article_ref": "OR ART. 311"
+        },
+        {
+            "article_ref": "OR ART. 312"
+        },
+        {
+            "article_ref": "OR ART. 313"
+        },
+        {
+            "article_ref": "OR ART. 314"
+        },
+        {
+            "article_ref": "OR ART. 315"
+        },
+        {
+            "article_ref": "OR ART. 316"
+        },
+        {
+            "article_ref": "OR ART. 317"
+        },
+        {
+            "article_ref": "OR ART. 318"
+        },
+        {
+            "article_ref": "OR ART. 319"
+        },
+        {
+            "article_ref": "OR ART. 320"
+        },
+        {
+            "article_ref": "OR ART. 321"
+        },
+        {
+            "article_ref": "OR ART. 322"
+        },
+        {
+            "article_ref": "OR ART. 323"
+        },
+        {
+            "article_ref": "OR ART. 324"
+        },
+        {
+            "article_ref": "OR ART. 325"
+        },
+        {
+            "article_ref": "OR ART. 326"
+        },
+        {
+            "article_ref": "OR ART. 327"
+        },
+        {
+            "article_ref": "OR ART. 328"
+        },
+        {
+            "article_ref": "OR ART. 329"
+        },
+        {
+            "article_ref": "OR ART. 330"
+        },
+        {
+            "article_ref": "OR ART. 331"
+        },
+        {
+            "article_ref": "OR ART. 332"
+        },
+        {
+            "article_ref": "OR ART. 333"
+        },
+        {
+            "article_ref": "OR ART. 334"
+        },
+        {
+            "article_ref": "OR ART. 335"
+        },
+        {
+            "article_ref": "OR ART. 336"
+        },
+        {
+            "article_ref": "OR ART. 337"
+        },
+        {
+            "article_ref": "OR ART. 338"
+        },
+        {
+            "article_ref": "OR ART. 339"
+        },
+        {
+            "article_ref": "OR ART. 340"
+        },
+        {
+            "article_ref": "OR ART. 341"
+        },
+        {
+            "article_ref": "OR ART. 342"
+        },
+        {
+            "article_ref": "OR ART. 343"
+        },
+        {
+            "article_ref": "OR ART. 344"
+        },
+        {
+            "article_ref": "OR ART. 345"
+        },
+        {
+            "article_ref": "OR ART. 346"
+        },
+        {
+            "article_ref": "OR ART. 347"
+        },
+        {
+            "article_ref": "OR ART. 348"
+        },
+        {
+            "article_ref": "OR ART. 349"
+        },
+        {
+            "article_ref": "OR ART. 350"
+        },
+        {
+            "article_ref": "OR ART. 351"
+        },
+        {
+            "article_ref": "OR ART. 352"
+        },
+        {
+            "article_ref": "OR ART. 353"
+        },
+        {
+            "article_ref": "OR ART. 354"
+        },
+        {
+            "article_ref": "OR ART. 355"
+        },
+        {
+            "article_ref": "OR ART. 356"
+        },
+        {
+            "article_ref": "OR ART. 357"
+        },
+        {
+            "article_ref": "OR ART. 358"
+        },
+        {
+            "article_ref": "OR ART. 359"
+        },
+        {
+            "article_ref": "OR ART. 360"
+        },
+        {
+            "article_ref": "OR ART. 361"
+        },
+        {
+            "article_ref": "OR ART. 362"
+        },
+        {
+            "article_ref": "OR ART. 363"
+        },
+        {
+            "article_ref": "OR ART. 364"
+        },
+        {
+            "article_ref": "OR ART. 365"
+        },
+        {
+            "article_ref": "OR ART. 366"
+        },
+        {
+            "article_ref": "OR ART. 367"
+        },
+        {
+            "article_ref": "OR ART. 368"
+        },
+        {
+            "article_ref": "OR ART. 369"
+        },
+        {
+            "article_ref": "OR ART. 370"
+        },
+        {
+            "article_ref": "OR ART. 371"
+        },
+        {
+            "article_ref": "OR ART. 372"
+        },
+        {
+
+
+Output:
+{
+    "articles": [
+        {
+            "article_ref": "BV ART. 38"
+        },
+        {
+            "article_ref": "BuG ART. 12"
+        }
+    ]
+}
+

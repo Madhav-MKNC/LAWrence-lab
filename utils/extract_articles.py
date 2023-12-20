@@ -31,7 +31,12 @@ def extract_articles(
     ground_truth_df,
     output_file_path
 ):
-    prompt_row = overview_df.iloc[prompt_index]
+    # read [prompt:model]
+    try:
+        prompt_row = overview_df.iloc[prompt_index]
+    except:
+        print("\033[31m[!] [prompt:model] row empty.\033[m")
+        return
     
     # read prompts
     prompt_num = prompt_row["Prompt"]
@@ -81,14 +86,16 @@ def extract_articles(
         if str(expected_article_refs).lower() != "nan":
             for i in expected_article_refs.strip().split("\n"):
                 human_articles_set.add(i.strip())
+        
+        # logging  
+        print(f"\n[{prompt_index+1}.{inputs_index+1}] INPUT:\n* SITUATION: {str(situation)[0:50]}...\n* QUESTION: {str(question)[0:50]}...")
 
         # predict articles with openai
         response = get_openai_response(
             prompt = full_prompt,
             model = used_model,
             situation = situation,
-            question = question,
-            index = inputs_index + 1
+            question = question
         )
         predicted_article_refs = validate_articles(response)
         
