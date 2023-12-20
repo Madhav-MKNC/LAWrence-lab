@@ -7,14 +7,10 @@ Comparing the performance of several models with several prompts based on their 
 touch .env
 ```
 
-Add the following creds inside .env file inside the the uc-02 folder and save it.
+Add the following creds inside .env file.
 
 ```
 OPENAI_API_KEY=
-ENDPOINT=
-COSMOS_DB_KEY=
-DATABASE_NAME=
-CONTAINER_NAME=
 ```
 
 Install dependencies:
@@ -38,22 +34,12 @@ Every prompt should mention only this response format explicitly
 
 # Run
 
-For Extracting and comparing articles: (output will be saved as Output_Comparison.xlsx)
-
-<code>python extract_articles.py START_ROW END_ROW</code>
-
-Example Usage:
-
-```
-python extract_articles.py 1 3
-```
-
 For mean performances: (output will be saved as Output_Performance.xlsx)
 
-<code>python main.py START_ROW END_ROW</code>
+<code>python evaluate.py START_ROW END_ROW</code>
 
 Example Usage:
 
 ```
-python main.py 1 3
+python evaluate.py 1 3
 ```
