@@ -36,7 +36,7 @@ def get_openai_response(
             messages = messages,
             model = model,
             response_format = {"type": "json_object"},
-            max_tokens = 4096,
+            max_tokens = 3000,
             temperature = 0,
             top_p = 1,
             frequency_penalty = 0,
