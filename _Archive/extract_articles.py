@@ -6,7 +6,7 @@ import shutil
 import time
 import pandas as pd
 
-from utils.tools import get_openai_response, validate_articles
+from utils.openai import get_openai_response, validate_articles
 from utils.compare import get_performance
 
 

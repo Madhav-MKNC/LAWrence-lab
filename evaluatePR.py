@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from utils.extract_articles import create_backup, extract_articles
+from utils import create_backup, extract_articles
 from datetime import datetime
 import sys
 import pandas as pd
@@ -38,12 +38,30 @@ original_df = articles_extraction_df.copy()
 print("\n####################################################")
 print("## Extracting articles and Evaluating performance ##")
 print("####################################################")
+
 for prompt_index in range(start_row, end_row + 1):
+    print(f"\n[*] Reading row no. {prompt_index + 1}")
+    
+    # read for a valid [prompt:model] row
+    try:
+        prompt_row = overview_df.iloc[prompt_index]
+        prompt_num = int(prompt_row["Prompt"])
+        prompt_name = prompt_row["Prompt Name"].strip()
+        full_prompt = prompt_row["Full Prompt"].strip()
+        used_model = prompt_row["Used model"].strip()
+    except:
+        print(f"\033[31m[{prompt_index+1}] Invalid row.\033[m")
+        continue
+
+    # Evaluating performance and updating articles_extraction_df
     extract_articles(
-        prompt_index = prompt_index,
-        overview_df = overview_df,
         ground_truth_df = articles_extraction_df,
-        output_file_path = output_file_path
+        prompt_index = prompt_index,
+        prompt_num = prompt_num,
+        prompt_name = prompt_name,
+        full_prompt = full_prompt,
+        used_model = used_model,
+        output_file_path = output_file_path,
     )
 
 
@@ -51,10 +69,11 @@ for prompt_index in range(start_row, end_row + 1):
 print("\n#####################################")
 print("## Calculating average performance ##")
 print("#####################################")
+
 for index in range(start_row, end_row + 1):
     print(f"\n[*] Reading row no. {index + 1}")
     
-    # read [prompt:model]
+    # read for a valid [prompt:model] row
     try:
         row = overview_df.iloc[index]
         prompt_num = int(row["Prompt"])
@@ -62,7 +81,7 @@ for index in range(start_row, end_row + 1):
         full_prompt = row["Full Prompt"].strip()
         used_model = row["Used model"].strip()
     except:
-        print(f"\033[31m[{index+1}] [prompt:model] Invalid row.\033[m")
+        print(f"\033[31m[{index+1}] Invalid row.\033[m")
         continue
     
     # fetching performance
@@ -72,22 +91,6 @@ for index in range(start_row, end_row + 1):
     except Exception as e:
         print(f"\033[31m[{index+1}]This [prompt:model] has not been evaluated yet.", str(e), "\033[m")
         continue
-    
-    # # mean precision
-    # sum_p = 0
-    # total_p = 0
-    # for p in precision_column:
-    #     if str(p).lower() != 'nan':
-    #         sum_p += float(p)
-    #         total_p += 1
-    
-    # # mean recall
-    # sum_r = 0
-    # total_r = 0
-    # for n in recall_column:
-    #     if str(n).lower() != 'nan':
-    #         sum_r += float(n)
-    #         total_r += 1
 
     # calculating average values
     sum_p, total_p = 0, 0

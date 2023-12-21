@@ -30,8 +30,10 @@ def get_openai_response(
             'content': prompt.format(situation=situation, question=question, language=language)
         }
     ]
-
+    
+    print(f"[*] Retreiving articles with OpenAI...")
     try:
+        # If the model used supports 'response_type' parameter in completion
         if model.lower().strip() in ["gpt-4-1106-preview", "gpt-3.5-turbo-1106"]:
             response = openai_client.chat.completions.create(
                 messages = messages,
@@ -46,6 +48,7 @@ def get_openai_response(
             output = response.choices[0].message.content
             return output
 
+        # If the model used does not support 'response_type' parameter in completion
         else:
             response = openai_client.chat.completions.create(
                 messages = messages,
@@ -68,19 +71,24 @@ def get_openai_response(
 def validate_articles(output: str) -> set:
     """
     Expects the output:str returned from openai API call in the following structure:-
-    {
-        "some key": [
-            {"article_ref": "CO ART. 337"},
-            {"article_ref": "OR ART. 12a Abs. 2"}
-        ]
-    }
+        {
+            "some key": [
+                {"article_ref": "CO ART. 337"},
+                {"article_ref": "OR ART. 12a Abs. 2"}
+            ]
+        }
+    Returns:-
+        {
+            "CO ART. 337",
+            "OR ART. 12a Abs. 2"
+        }
     """
     articles = set()
     try:
         # print(f"\033[93m* GPT: {output}\033[m")
         output = json.loads(output)
         output = list(output.values())[0]
-        print(f"\033[93m* Articles retured from GPT: {output}\033[m")
+        # print(f"\033[93m* Articles retured from GPT: {output}\033[m")
         for i in output:
             articles.add(i["article_ref"])
         print('[+] Validated articles returned from GPT.')
