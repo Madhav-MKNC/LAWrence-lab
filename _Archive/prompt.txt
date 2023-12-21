@@ -3,14 +3,7 @@ Your task: Based on the situation, the question below, you will create a list of
 You will always answer in German.
 
 Your output will always be only a JSON list of relevant law articles along with each relevant paragraph as a JSON in the following structure:
-{{
-    "articles": [
-        {{
-            "article_ref": "OR ART. 27 Abs. 2bis"
-        }}
-        # more articles (if any)
-    ]
-}}
+{{"articles": [{{"article_ref": "OR ART. 27 Abs. 2bis"}} # more articles (if any)]}}
 
 Legal Situation:
 {situation}
