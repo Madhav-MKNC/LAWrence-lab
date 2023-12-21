@@ -36,10 +36,10 @@ Every prompt should mention only this response format explicitly
 
 For mean performances: (output will be saved as Output_Performance.xlsx)
 
-<code>python evaluate.py START_ROW END_ROW</code>
+<code>python evaluatePR.py START_ROW END_ROW</code>
 
 Example Usage:
 
 ```
-python evaluate.py 1 3
+python evaluatePR.py 1 3
 ```

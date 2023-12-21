@@ -35,7 +35,11 @@ def extract_articles(
     try:
         prompt_row = overview_df.iloc[prompt_index]
     except:
-        print("\033[31m[!] [prompt:model] row empty.\033[m")
+        """
+        NOTE: while documentation fix this part too
+        [ugly displaying in console]
+        """
+        print("\033[31m[!] row empty.\033[m")
         return
     
     # read prompts
@@ -54,7 +58,7 @@ def extract_articles(
     full_prompt = full_prompt.strip()
     used_model = used_model.strip()
 
-    print(f"\n[prompt:model {prompt_num}] Using: ({prompt_name}, {used_model})")
+    print(f"\n[{prompt_num}] Using: ({prompt_name}, {used_model})")
     
     # input columns names
     situation_column_head = "Situation"
