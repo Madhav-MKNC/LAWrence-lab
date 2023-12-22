@@ -27,8 +27,8 @@ def extract_book_from_human(article_string: str) -> str:
     Approach: If the string starts with 'art.', then the book name must be at the end; otherwise, the book name will be at the beginning.
     Final Conclusion: Bookname will always be at the end.
     """
-    article_string = article_string.lower()
-    return str(article_string.split(" ")[-1])
+    article_string = article_string.lower().split(" ")[-1]
+    return article_string
 
 
 # extract bookname string from the article_ref string

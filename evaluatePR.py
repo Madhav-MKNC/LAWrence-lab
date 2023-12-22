@@ -102,19 +102,24 @@ for index in range(start_row, end_row + 1):
     # results
     avg_precision, avg_recall = sum_p / total_p, sum_r / total_r
 
-    # display results
-    results = f"""
-## Row {index+1}
+    # write results to results.md
+    results = f"""# Row {index+1}
 - Prompt Num  : {prompt_num}
 - Prompt Name : {prompt_name}
 - Used Model  : {used_model}
 - Prompt      : {full_prompt[0:50]}...
-- Average Precision : ```{avg_precision}```
-- Average Recall    : ```{avg_recall}```
-    """.strip()
+### Average Precision : 
+```
+{avg_precision}
+```
+### Average Recall    :
+```
+{avg_recall}
+```"""
     with open('results.md', 'w') as file:
         file.write(results)
-    
+
+    # display results
     print(f"\033[96m[{index+1}] Prompt Num  : {prompt_num}")
     print(f"\033[96m[{index+1}] Prompt Name : {prompt_name}")
     print(f"\033[96m[{index+1}] Used Model  : {used_model}")
