@@ -15,7 +15,7 @@ def extract_article(article_string: str) -> list:
     if article_match:
         return article_match
     else:
-        print(f'\033[31m*** extract_article(): No article extracted from {article_string}\033[m')
+        print(f'\033[31m[!] extract_article(): No article extracted from {article_string}\033[m')
         return []
 
 
@@ -59,14 +59,14 @@ def is_subset_article(human_article, predicted_article):
 def get_performance(
     human_articles_set: set,
     predicted_artilces_set: set
-) -> (float, float):
+) -> (float, float, float):
     """
     Evaluate the precision and recall of prompt/model based on the output recieved.
     """
     if not human_articles_set or not predicted_artilces_set:
-        precision, recall = 0, 0
+        precision, recall, coverage = 0, 0, 0
         print("\033[32m[=]", precision, recall, "\033[m")
-        return precision, recall
+        return precision, recall, coverage
 
     # extract human articles and booknames
     human_articles = set()
@@ -95,12 +95,13 @@ def get_performance(
     print(f"\033[30m*** true_positives : {true_positives}\033[m")
     
     if not len(predicted_articles) or not len(human_articles):
-        precision, recall = 0, 0
+        precision, recall, coverage = 0, 0, 0
         print("\033[32m[=]", precision, recall, "\033[m")
-        return precision, recall
+        return precision, recall, coverage
 
     precision = len(true_positives) / len(predicted_articles)
     recall = len(true_positives) / len(human_articles)
+    coverage = 0
     
     print("\033[32m[=]", precision, recall, "\033[m")
-    return precision, recall
+    return precision, recall, coverage

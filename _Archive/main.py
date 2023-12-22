@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from utils import extract_articles, get_output_file_path
+from utils import create_backup, extract_articles
+from datetime import datetime
 import sys
 import pandas as pd
 
@@ -17,9 +18,12 @@ except:
 
 # input xlsx file
 file_path = 'Ground Truth.xlsx'
+create_backup(source_file_path=file_path)
 
 # output xlsx
-output_file_path =  get_output_file_path(start_row=start_row, end_row=end_row)
+current_timestamp = datetime.now()
+formatted_date = current_timestamp.strftime("%Y-%m-%d_%H-%M-%S")
+output_file_path =  f"Outputs/row{start_row+1}to_row{end_row+1}_{formatted_date}.xlsx"
 
 
 # Read overview sheet
@@ -102,19 +106,18 @@ for index in range(start_row, end_row + 1):
     # results
     avg_precision, avg_recall = sum_p / total_p, sum_r / total_r
 
-    # display results
-    results = f"""
-## Row {index+1}
-- Prompt Num  : {prompt_num}
-- Prompt Name : {prompt_name}
-- Used Model  : {used_model}
-- Prompt      : {full_prompt[0:50]}...
-- Average Precision : ```{avg_precision}```
-- Average Recall    : ```{avg_recall}```
-    """
-    with open('results.md', 'w') as file:
-        file.write(results)
+    # # Update the "Precision" and "Recall" columns with the calculated values
+    # overview_df.at[index, 'Precision'] = avg_precision
+    # overview_df.at[index, 'Recall'] = avg_recall
     
+    # # Saving output
+    # print("[*] Saving Ouput")
+    # with pd.ExcelWriter(file_path, mode='a', engine='openpyxl', if_sheet_exists='replace') as writer:
+    #     overview_df.to_excel(writer, sheet_name='Overview', index=False)
+    #     original_df.to_excel(writer, sheet_name='Ground truth', index=False)
+    # print("[+] Response saved")
+
+    # display results
     print(f"\033[96m[{index+1}] Prompt Num  : {prompt_num}")
     print(f"\033[96m[{index+1}] Prompt Name : {prompt_name}")
     print(f"\033[96m[{index+1}] Used Model  : {used_model}")

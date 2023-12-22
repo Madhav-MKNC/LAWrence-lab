@@ -2,18 +2,18 @@
 # -*- coding: utf-8 -*-
 
 import os
-import shutil
-import time
+from datetime import datetime
 
 from utils.openai import get_openai_response, validate_articles
 from utils.compare import get_performance
 
 
-# create backup for Ground Truth.xlsx
-def create_backup(source_file_path):
-    if not os.path.exists("_bak"): os.makedirs("_bak")
-    destination_file_path = f"_bak/{time.time()}{source_file_path}"
-    shutil.copyfile(source_file_path, destination_file_path)
+# create output file
+def get_output_file_path(start_row, end_row):
+    current_timestamp = datetime.now()
+    formatted_date = current_timestamp.strftime("%Y-%m-%d_%H-%M-%S")
+    file_path = f"Outputs/row{start_row+1}to_row{end_row+1}_{formatted_date}.xlsx"    
+    return file_path
 
 
 # save output files
@@ -67,7 +67,7 @@ def extract_articles(
                 human_articles_set.add(i.strip())
         
         # logging  
-        print(f"\n[{prompt_index+1}.{inputs_index+1}] INPUT:\n* SITUATION: {str(situation)[0:50]}...\n* QUESTION: {str(question)[0:50]}...")
+        print(f"\n[{prompt_index+1}.{inputs_index+1}] INPUT:\n*** SITUATION: {str(situation)[0:50]}...\n*** QUESTION: {str(question)[0:50]}...")
 
         # predict articles with openai
         response = get_openai_response(
@@ -81,7 +81,7 @@ def extract_articles(
         predicted_article_refs = validate_articles(response)
         
         # evaluate performance
-        precision, recall = get_performance(
+        precision, recall, coverage = get_performance(
             human_articles_set = human_articles_set,
             predicted_artilces_set = predicted_article_refs
         )

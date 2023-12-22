@@ -63,7 +63,7 @@ def get_openai_response(
             return output
 
     except OpenAIError as e:
-        print('\033[31m*** get_openai_response():', str(e), "\033[m")
+        print('\033[31m[!] get_openai_response():', str(e), "\033[m")
         return "{'articles': []}"
 
 
@@ -93,6 +93,6 @@ def validate_articles(output: str) -> set:
             articles.add(i["article_ref"])
         print('[+] Validated articles returned from GPT.')
     except Exception as e:
-        print('\033[31m*** validate_articles():', str(e), "\033[m")
+        print('\033[31m[!] validate_articles():', str(e), "\033[m")
     return articles
 
