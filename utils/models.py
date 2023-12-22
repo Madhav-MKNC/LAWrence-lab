@@ -1,13 +1,11 @@
 # data models
 
-
-from pydantic import BaseModel
 from typing import Optional, List, Set, Dict
 
 import re
 
 
-class Article(BaseModel):
+class Article:
     """
     Base class for Articles.
     """
@@ -19,11 +17,9 @@ class Article(BaseModel):
     def __init__(self, article_str: str, source: str) -> None:
         """
         Initialize the class with an article string and a source.
-
         Parameters:
         article_str (str): A string containing the article.
         source (str): The source of the article. Must be either 'human' or 'openai'.
-
         Raises:
         ValueError: If the source is not 'human' or 'openai'.
         """
@@ -68,14 +64,14 @@ class MetricCalculation:
         self.human_article = human_article
         self.predicted_article = predicted_article
     
-    def fullArticleMatch(self) -> bool:
+    def __fullArticleMatch(self) -> bool:
         """
         Compares the full article i.e. (bookname, articlenum) tuple
         """
         
         return True
     
-    def is_subset_article(human_article: Article, predicted_article: Article) -> bool:
+    def __is_subset_article(human_article: Article, predicted_article: Article) -> bool:
         """
         Checks if the predicted article is the same as or a subset of the human-labeled article.
         For example, '34' is a subset of '34a', and '34' matches '34'.
@@ -123,7 +119,7 @@ class OpenAI:
     
     def get_response(
         self,
-        prompt_content: str,
+        prompt: str,
         model: str,
         role: str = 'system',
     ) -> str:
@@ -131,7 +127,7 @@ class OpenAI:
         OpenAI chat completion API.
         """
         
-        messages = [{'role': role, 'content': prompt_content}]
+        messages = [{'role': role, 'content': prompt}]
         response = ...
         return response
 
@@ -147,13 +143,13 @@ class OpenAI:
         Retrieve Articles.
         """
         
-        prompt_content = prompt.format(
+        prompt = prompt.format(
             situation = situation,
             question = question,
             language = language
         )
         output = self.get_response(
-            prompt_content = prompt_content,
+            prompt = prompt,
             model = model
         )
         articles = self.validate_articles(output)
@@ -162,7 +158,6 @@ class OpenAI:
     def validate_articles(self, output_str) -> Set[str]:
         """
         Validate the Retrieved Articles.
-
         Expects the output:str returned from openai API call in the following structure:-
             {
                 "some key": [
@@ -182,6 +177,24 @@ class OpenAI:
 
 class HandleCSVData:
     """
-    Class for processing the CSV data.
+    Class for processing the CSV Data.
+    """
+    pass
+    
+    
+class HandleCSVRow(HandleCSVData):
+    """
+    Class for processing a CSV row.
     """
     
+    def __init__(self, sheet: str) -> None:
+        """
+        Initialize the class with an article string and a source.
+        Parameters:
+        article_str (str): A string containing the article.
+        source (str): The source of the article. Must be either 'human' or 'openai'.
+        Raises:
+        ValueError: If the source is not 'human' or 'openai'.
+        """
+        
+        
