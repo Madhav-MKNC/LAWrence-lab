@@ -111,7 +111,7 @@ for index in range(start_row, end_row + 1):
 - Prompt      : {full_prompt[0:50]}...
 - Average Precision : ```{avg_precision}```
 - Average Recall    : ```{avg_recall}```
-    """
+    """.strip()
     with open('results.md', 'w') as file:
         file.write(results)
     
