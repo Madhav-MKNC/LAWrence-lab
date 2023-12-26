@@ -4,8 +4,9 @@
 import os
 from datetime import datetime
 
-from utils.openai import get_openai_response, validate_articles
-from utils.compare import get_performance
+from _Testing.models import *
+# from _Testing.openai import get_openai_response, validate_articles
+# from _Testing.compare import get_performance
 
 
 # create output file
@@ -70,24 +71,24 @@ def extract_articles(
         print(f"\n[{prompt_index+1}.{inputs_index+1}] INPUT:\n*** SITUATION: {str(situation)[0:50]}...\n*** QUESTION: {str(question)[0:50]}...")
 
         # predict articles with openai
-        response = get_openai_response(
+        predicted_article_set = OpenAI.get_articles(
             prompt = full_prompt,
             model = used_model,
             situation = situation,
             question = question
         )
         
-        # validate openai response
-        predicted_article_refs = validate_articles(response)
-        
         # evaluate performance
-        precision, recall, coverage = get_performance(
-            human_articles_set = human_articles_set,
-            predicted_artilces_set = predicted_article_refs
+        metric_calc = MetricCalculation(
+            human_article_set = human_articles_set,
+            predicted_article_set = predicted_article_set
         )
+        precision = metric_calc.calculate_precision()
+        recall = metric_calc.calculate_recall()
+        coverage = metric_calc.calculate_coverage()
 
         # write results
-        ground_truth_df.at[inputs_index, predicted_article_column_head] = "\n".join(predicted_article_refs)
+        ground_truth_df.at[inputs_index, predicted_article_column_head] = "\n".join(predicted_article_set)
         ground_truth_df.at[inputs_index, precision_column_head] = precision
         ground_truth_df.at[inputs_index, recall_column_head] = recall
 

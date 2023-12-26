@@ -59,10 +59,10 @@ class MetricCalculation:
     Class for handling performance evaluating operations.
     """
     
-    def __init__(self, human_article: Article, predicted_article: Article) -> None:
+    def __init__(self, human_article_set: Set[Article], predicted_article_set: Set[Article]) -> None:
         
-        self.human_article = human_article
-        self.predicted_article = predicted_article
+        self.human_article_set = human_article_set
+        self.predicted_article_set = predicted_article_set
     
     def __fullArticleMatch(self) -> bool:
         """
@@ -71,7 +71,7 @@ class MetricCalculation:
         
         return True
     
-    def __is_subset_article(human_article: Article, predicted_article: Article) -> bool:
+    def __is_subset_article(self, human_article: Article, predicted_article: Article) -> bool:
         """
         Checks if the predicted article is the same as or a subset of the human-labeled article.
         For example, '34' is a subset of '34a', and '34' matches '34'.
@@ -111,11 +111,11 @@ class OpenAI:
     Class for handling OpenAI calls.
     """
     response_format: Optional[Dict[str, str]]
-    temperature: Optional[int]
-    top_p: Optional[int]
-    frequency_penalty: Optional[int]
-    presence_penalty: Optional[int]
-    seed: Optional[int]
+    temperature: Optional[int] = 0
+    top_p: Optional[int] = 1
+    frequency_penalty: Optional[int] = 0
+    presence_penalty: Optional[int] = 0
+    seed: Optional[int] = 0
     
     def get_response(
         self,
@@ -131,7 +131,7 @@ class OpenAI:
         response = ...
         return response
 
-    def get_article(
+    def get_articles(
         self,
         prompt: str,
         model: str,
@@ -152,10 +152,10 @@ class OpenAI:
             prompt = prompt,
             model = model
         )
-        articles = self.validate_articles(output)
+        articles = self.__validate_articles(output)
         return articles
 
-    def validate_articles(self, output_str) -> Set[str]:
+    def __validate_articles(self, output_str) -> Set[str]:
         """
         Validate the Retrieved Articles.
         Expects the output:str returned from openai API call in the following structure:-
