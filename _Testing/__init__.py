@@ -2,19 +2,12 @@
 # -*- coding: utf-8 -*-
 
 import os
-from datetime import datetime
 
 from _Testing.models import *
 # from _Testing.openai import get_openai_response, validate_articles
 # from _Testing.compare import get_performance
 
-
-# create output file
-def get_output_file_path(start_row, end_row):
-    current_timestamp = datetime.now()
-    formatted_date = current_timestamp.strftime("%Y-%m-%d_%H-%M-%S")
-    file_path = f"Outputs/row{start_row+1}to_row{end_row+1}_{formatted_date}.xlsx"    
-    return file_path
+predictions = OpenAI()
 
 
 # save output files
@@ -65,13 +58,14 @@ def extract_articles(
         human_articles_set = set()
         if str(expected_article_refs).lower() != "nan":
             for i in expected_article_refs.strip().split("\n"):
-                human_articles_set.add(i.strip())
+                human_article = Article(i.strip())
+                human_articles_set.add(human_article)
         
         # logging  
         print(f"\n[{prompt_index+1}.{inputs_index+1}] INPUT:\n*** SITUATION: {str(situation)[0:50]}...\n*** QUESTION: {str(question)[0:50]}...")
 
         # predict articles with openai
-        predicted_article_set = OpenAI.get_articles(
+        predicted_article_set = predictions.get_articles(
             prompt = full_prompt,
             model = used_model,
             situation = situation,

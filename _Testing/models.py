@@ -60,6 +60,12 @@ class MetricCalculation:
     """
     
     def __init__(self, human_article_set: Set[Article], predicted_article_set: Set[Article]) -> None:
+        """
+        Initialize the class with a set of human-labeled articles set and the predicted articles set.
+        Parameters:
+        human_article_set (Set[Article]): A set containing the human labeled articles of type Article().
+        predicted_article_set (Set[Article]): A set containing the predicted articles of type Article().
+        """
         
         self.human_article_set = human_article_set
         self.predicted_article_set = predicted_article_set
@@ -138,7 +144,7 @@ class OpenAI:
         situation: str,
         question: str,
         language: str = "German",
-    ) -> Set[str]:
+    ) -> Set[Article]:
         """
         Retrieve Articles.
         """
@@ -155,7 +161,7 @@ class OpenAI:
         articles = self.__validate_articles(output)
         return articles
 
-    def __validate_articles(self, output_str) -> Set[str]:
+    def __validate_articles(self, output_str) -> Set[Article]:
         """
         Validate the Retrieved Articles.
         Expects the output:str returned from openai API call in the following structure:-
@@ -172,7 +178,7 @@ class OpenAI:
             }
         """
         
-        return {"OR Art. 99m"}
+        return Article("OR Art. 99m", source='openai')
 
 
 class HandleCSVData:
@@ -182,19 +188,18 @@ class HandleCSVData:
     pass
     
     
-class HandleCSVRow(HandleCSVData):
+class CSVRow(HandleCSVData):
     """
     Class for processing a CSV row.
     """
     
-    def __init__(self, sheet: str) -> None:
+    def __init__(self, index: int) -> None:
         """
-        Initialize the class with an article string and a source.
+        Initialize the class with a row index.
         Parameters:
-        article_str (str): A string containing the article.
-        source (str): The source of the article. Must be either 'human' or 'openai'.
-        Raises:
-        ValueError: If the source is not 'human' or 'openai'.
+        index (int): row index.
         """
+        
+        self.index = index
         
         

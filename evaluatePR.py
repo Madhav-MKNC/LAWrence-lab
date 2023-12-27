@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from utils import extract_articles, get_output_file_path
+from utils import extract_articles
 import sys
+from datetime import datetime
 import pandas as pd
 
 
@@ -19,7 +20,9 @@ except:
 file_path = 'Ground Truth.xlsx'
 
 # output xlsx
-output_file_path =  get_output_file_path(start_row=start_row, end_row=end_row)
+current_timestamp = datetime.now()
+formatted_date = current_timestamp.strftime("%Y-%m-%d_%H-%M-%S")
+output_file_path = f"Outputs/row{start_row+1}to_row{end_row+1}_{formatted_date}.xlsx"    
 
 
 # Read overview sheet

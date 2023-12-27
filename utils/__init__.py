@@ -2,18 +2,9 @@
 # -*- coding: utf-8 -*-
 
 import os
-from datetime import datetime
 
 from utils.openai import get_openai_response, validate_articles
 from utils.compare import get_performance
-
-
-# create output file
-def get_output_file_path(start_row, end_row):
-    current_timestamp = datetime.now()
-    formatted_date = current_timestamp.strftime("%Y-%m-%d_%H-%M-%S")
-    file_path = f"Outputs/row{start_row+1}to_row{end_row+1}_{formatted_date}.xlsx"    
-    return file_path
 
 
 # save output files
